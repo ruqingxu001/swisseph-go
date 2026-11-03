@@ -1,5 +1,7 @@
 # Swiss Ephemeris Go
 
+**简体中文** | [English](README.en.md)
+
 Swiss Ephemeris **2.10.03** 的独立 Go 移植，保留原算法及 AGPL。9 个核心 C 单元已转译；运行时不需要 CGO、libswe 或 C 子进程，使用纯 Go `modernc.org/libc` 和 `unsafe`。这是 C 结构的直接转译，不是重新设计的天文算法。
 
 **106 个公开 API 均有 Go 接口和原 C 样本对照。** 已实际运行 Flutter 的 sweph 包装层及 App CalcTools 做比较。逐函数结果、容差和未覆盖范围见 [API_COVERAGE.md](API_COVERAGE.md)。
