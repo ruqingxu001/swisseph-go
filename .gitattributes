@@ -1,0 +1,4 @@
+# Preserve the exact bytes covered by the data checksum manifests.
+ephe/** -text
+ephe/**/*.se1 binary
+testdata/jpl/*.eph binary

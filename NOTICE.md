@@ -7,7 +7,7 @@ This is a local Go translation of Swiss Ephemeris, not an independent algorithm 
 - Commit: `175e1fcb3108bcd5c0d146c803f51dcf23508012`
 - Original copyright: Astrodienst AG; authors Dieter Koch and Alois Treindl. This attribution is not an endorsement.
 - This local derivative selects **AGPL-3.0**, with the full license in `LICENSE`. The original dual-license notice is preserved in `upstream/LICENSE`, all original source headers, and the generated Go files. Translation does not grant a free closed-source commercial license.
-- Unmodified input files and SHA-256 hashes are in `upstream/`. The original Makefile is retained for provenance; its optional examples are not included. No ephemeris binary data is redistributed here.
+- Unmodified input files and SHA-256 hashes are in `upstream/`. The original Makefile is retained for provenance; its optional examples are not included. The exact Flutter ephemeris dataset and the DE200 test binary are bundled; see EPHEMERIS.md for provenance and checksum manifests.
 - Our added wrapper, harness, and build scripts are licensed under AGPL-3.0-only.
 
 ## Translation changes
@@ -25,3 +25,9 @@ A deterministic post-processing step replaces generated `libc.Xatof` calls with 
 The public API marshaling layer is generated from the unmodified `swephexp.h`; it copies slices to libc-managed allocations and preserves native statuses. Engine/Session state handling, validation, fixtures and documentation are local additions dated 2026-11-02.
 
 Public scalar C `char` arguments use a target-specific alias: signed on Darwin and Linux amd64, unsigned on Linux arm64. The Go-facing int8 parameter preserves the same eight bits.
+
+## Bundled ephemeris data
+
+`ephe/` preserves the existing Flutter Swiss Ephemeris dataset byte-for-byte, including its original catalog headers and notes. Swiss Ephemeris attribution and license notices remain in `upstream/LICENSE` and `LICENSE`.
+
+`testdata/jpl/de200.eph` is an unchanged NASA/JPL DE200 binary from the official Solar System Dynamics download service. Its provenance, byte count and SHA-256 are recorded in `testdata/jpl-source.json`. It is third-party scientific data; the wrapper's AGPL declaration does not replace the data provider's applicable terms. No NASA/JPL endorsement is implied.

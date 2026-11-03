@@ -14,7 +14,7 @@ Swiss Ephemeris **2.10.03** 的独立 Go 移植，保留原算法及 AGPL。9 �
 import swiss "github.com/ruqingxu001/swisseph-go"
 
 engine, err := swiss.New(swiss.Config{
-    EphemerisPath: "/absolute/path/to/ephe",
+    EphemerisPath: "./ephe", // 在本仓库根目录运行；部署时传实际数据目录。
     SiderealMode: swiss.Lahiri,
 })
 if err != nil { return err }
@@ -55,9 +55,9 @@ err = engine.WithSession(func(s *swiss.Session) error {
 ```sh
 CGO_ENABLED=0 go test ./...
 
-# 星历目录使用与 Flutter 相同的数据；JPL 为 NASA DE200 文件。
-export SWISSGO_TEST_EPHE_PATH=/absolute/path/to/ephe
-export SWISSGO_TEST_JPL_FILE=/absolute/path/to/de200.eph
+# 在仓库根目录使用随库提供的数据。
+export SWISSGO_TEST_EPHE_PATH="$PWD/ephe"
+export SWISSGO_TEST_JPL_FILE="$PWD/testdata/jpl/de200.eph"
 CGO_ENABLED=0 go test -tags differential,fluttercompare -v ./... -timeout 5m
 
 go test -race -tags differential,fluttercompare ./... -timeout 5m
@@ -68,7 +68,7 @@ C 编译器与 Python 3 只用于构建测试参照。race 工具自身需要 CG
 
 本次通过：106 API / 256 场景、2,260 组常用接口、400 组真 JPL 文件、1,885 条实际 Dart/App 输出、497 次非法参数检查、1,020 次 atof 比较，以及 race。四个平台构建通过；四平台源码及 API 重新生成后与现有文件一致。
 
-星历不随库分发。文件校验值见 `testdata/ephemeris.sha256`，JPL 下载地址和哈希见 `testdata/jpl-source.json`。不设置 JPL 文件时该项会明确跳过；`fluttercompare` 要求数据与保存的参考清单一致。
+仓库已包含 Flutter 使用的 36 个星历及辅助文件（`ephe/`），以及验证用 DE200（`testdata/jpl/de200.eph`）。来源、体积与使用方式见 [EPHEMERIS.md](EPHEMERIS.md)。校验值分别保存在 `testdata/ephemeris.sha256` 和 `testdata/jpl-source.json`。不设置 JPL 环境变量时该项仍会明确跳过。
 
 ## 重新采集 Flutter 参考
 
@@ -99,6 +99,6 @@ python3 tools/build_api_cases.py
 python3 tools/write_coverage.py --log /path/to/full-test.log
 ```
 
-来源、固定提交、转译调整和许可见 [NOTICE.md](NOTICE.md)，贡献流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。普通 CI 已配置；它不替代带星历数据的完整验收。
+来源、固定提交、转译调整和许可见 [NOTICE.md](NOTICE.md)，贡献流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。CI 运行基础验证；带星历数据的完整验收使用上面的 `differential,fluttercompare` 命令。
 
 当前属于移植验证版：未穷举全部输入和数据文件，尚未迁移 App 的全部合盘、推运、阿拉伯点及报告业务，也未做生产压测。样本通过不等于所有场景绝对无误。
