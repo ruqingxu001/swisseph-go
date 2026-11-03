@@ -1,0 +1,4387 @@
+[
+  {
+    "c_name": "swe_heliacal_ut",
+    "go_name": "HeliacalUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjdstart_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "datm",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      },
+      {
+        "name": "dobs",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "ObjectName",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "TypeEvent",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 50
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_heliacal_pheno_ut",
+    "go_name": "HeliacalPhenoUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "datm",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      },
+      {
+        "name": "dobs",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "ObjectName",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "TypeEvent",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "helflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "darr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 50
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_vis_limit_mag",
+    "go_name": "VisLimitMag",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjdut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "datm",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      },
+      {
+        "name": "dobs",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "ObjectName",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "helflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 8
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_heliacal_angle",
+    "go_name": "HeliacalAngle",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjdut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "dgeo",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "datm",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      },
+      {
+        "name": "dobs",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "helflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "mag",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_obj",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_sun",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_moon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "alt_moon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_topo_arcus_visionis",
+    "go_name": "TopoArcusVisionis",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjdut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "dgeo",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "datm",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      },
+      {
+        "name": "dobs",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "helflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "mag",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_obj",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "alt_obj",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_sun",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "azi_moon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "alt_moon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_astro_models",
+    "go_name": "SetAstroModels",
+    "return": "void",
+    "params": [
+      {
+        "name": "samod",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_astro_models",
+    "go_name": "GetAstroModels",
+    "return": "void",
+    "params": [
+      {
+        "name": "samod",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "sdet",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 8192
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_version",
+    "go_name": "Version",
+    "return": "string",
+    "params": [
+      {
+        "name": "buffer",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_library_path",
+    "go_name": "GetLibraryPath",
+    "return": "string",
+    "params": [
+      {
+        "name": "buffer",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_calc",
+    "go_name": "Calc",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_calc_ut",
+    "go_name": "CalcUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_calc_pctr",
+    "go_name": "CalcPctr",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iplctr",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xxret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_solcross",
+    "go_name": "Solcross",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_solcross_ut",
+    "go_name": "SolcrossUt",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_mooncross",
+    "go_name": "Mooncross",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_mooncross_ut",
+    "go_name": "MooncrossUt",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_mooncross_node",
+    "go_name": "MooncrossNode",
+    "return": "float64",
+    "params": [
+      {
+        "name": "jd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xlon",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "xlat",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_mooncross_node_ut",
+    "go_name": "MooncrossNodeUt",
+    "return": "float64",
+    "params": [
+      {
+        "name": "jd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xlon",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "xlat",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_helio_cross",
+    "go_name": "HelioCross",
+    "return": "int32",
+    "params": [
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dir",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "jd_cross",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_helio_cross_ut",
+    "go_name": "HelioCrossUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "x2cross",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "jd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dir",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "jd_cross",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar",
+    "go_name": "Fixstar",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar_ut",
+    "go_name": "FixstarUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar_mag",
+    "go_name": "FixstarMag",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "mag",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar2",
+    "go_name": "Fixstar2",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar2_ut",
+    "go_name": "Fixstar2Ut",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xx",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_fixstar2_mag",
+    "go_name": "Fixstar2Mag",
+    "return": "int32",
+    "params": [
+      {
+        "name": "star",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "mag",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_close",
+    "go_name": "Close",
+    "return": "void",
+    "params": []
+  },
+  {
+    "c_name": "swe_set_ephe_path",
+    "go_name": "SetEphePath",
+    "return": "void",
+    "params": [
+      {
+        "name": "path",
+        "ctype": "char",
+        "pointer": true,
+        "const": true,
+        "gotype": "string",
+        "size": 230
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_jpl_file",
+    "go_name": "SetJplFile",
+    "return": "void",
+    "params": [
+      {
+        "name": "fname",
+        "ctype": "char",
+        "pointer": true,
+        "const": true,
+        "gotype": "string",
+        "size": 255
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_planet_name",
+    "go_name": "GetPlanetName",
+    "return": "string",
+    "params": [
+      {
+        "name": "ipl",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "spname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_topo",
+    "go_name": "SetTopo",
+    "return": "void",
+    "params": [
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geoalt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_sid_mode",
+    "go_name": "SetSidMode",
+    "return": "void",
+    "params": [
+      {
+        "name": "sid_mode",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "t0",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ayan_t0",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_ayanamsa_ex",
+    "go_name": "GetAyanamsaEx",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "daya",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_ayanamsa_ex_ut",
+    "go_name": "GetAyanamsaExUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "daya",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_ayanamsa",
+    "go_name": "GetAyanamsa",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_ayanamsa_ut",
+    "go_name": "GetAyanamsaUt",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_ayanamsa_name",
+    "go_name": "GetAyanamsaName",
+    "return": "string",
+    "params": [
+      {
+        "name": "isidmode",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_current_file_data",
+    "go_name": "GetCurrentFileData",
+    "return": "string",
+    "params": [
+      {
+        "name": "ifno",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "tfstart",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "tfend",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "denum",
+        "ctype": "int",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_date_conversion",
+    "go_name": "DateConversion",
+    "return": "int32",
+    "params": [
+      {
+        "name": "y",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "m",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "d",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "utime",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "c",
+        "ctype": "char",
+        "pointer": false,
+        "const": false,
+        "gotype": "int8"
+      },
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_julday",
+    "go_name": "Julday",
+    "return": "float64",
+    "params": [
+      {
+        "name": "year",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "month",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "day",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "hour",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "gregflag",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_revjul",
+    "go_name": "Revjul",
+    "return": "void",
+    "params": [
+      {
+        "name": "jd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "gregflag",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "jyear",
+        "ctype": "int",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "jmon",
+        "ctype": "int",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "jday",
+        "ctype": "int",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "jut",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_utc_to_jd",
+    "go_name": "UtcToJd",
+    "return": "int32",
+    "params": [
+      {
+        "name": "iyear",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "imonth",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iday",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ihour",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "imin",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dsec",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "gregflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 2
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_jdet_to_utc",
+    "go_name": "JdetToUtc",
+    "return": "void",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "gregflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iyear",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imonth",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "iday",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "ihour",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imin",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "dsec",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_jdut1_to_utc",
+    "go_name": "Jdut1ToUtc",
+    "return": "void",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "gregflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iyear",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imonth",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "iday",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "ihour",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imin",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "dsec",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_utc_time_zone",
+    "go_name": "UtcTimeZone",
+    "return": "void",
+    "params": [
+      {
+        "name": "iyear",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "imonth",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iday",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ihour",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "imin",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dsec",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "d_timezone",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iyear_out",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imonth_out",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "iday_out",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "ihour_out",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imin_out",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "dsec_out",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_houses",
+    "go_name": "Houses",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "cusps",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      }
+    ]
+  },
+  {
+    "c_name": "swe_houses_ex",
+    "go_name": "HousesEx",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "cusps",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      }
+    ]
+  },
+  {
+    "c_name": "swe_houses_ex2",
+    "go_name": "HousesEx2",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "cusps",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "cusp_speed",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc_speed",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_houses_armc",
+    "go_name": "HousesArmc",
+    "return": "int32",
+    "params": [
+      {
+        "name": "armc",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "cusps",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      }
+    ]
+  },
+  {
+    "c_name": "swe_houses_armc_ex2",
+    "go_name": "HousesArmcEx2",
+    "return": "int32",
+    "params": [
+      {
+        "name": "armc",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "cusps",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "cusp_speed",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 37
+      },
+      {
+        "name": "ascmc_speed",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_house_pos",
+    "go_name": "HousePos",
+    "return": "float64",
+    "params": [
+      {
+        "name": "armc",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xpin",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 2
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_house_name",
+    "go_name": "HouseName",
+    "return": "string",
+    "params": [
+      {
+        "name": "hsys",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_gauquelin_sector",
+    "go_name": "GauquelinSector",
+    "return": "int32",
+    "params": [
+      {
+        "name": "t_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "imeth",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "dgsect",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sol_eclipse_where",
+    "go_name": "SolEclipseWhere",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_occult_where",
+    "go_name": "LunOccultWhere",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sol_eclipse_how",
+    "go_name": "SolEclipseHow",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sol_eclipse_when_loc",
+    "go_name": "SolEclipseWhenLoc",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_occult_when_loc",
+    "go_name": "LunOccultWhenLoc",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sol_eclipse_when_glob",
+    "go_name": "SolEclipseWhenGlob",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ifltype",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_occult_when_glob",
+    "go_name": "LunOccultWhenGlob",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ifltype",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_eclipse_how",
+    "go_name": "LunEclipseHow",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_eclipse_when",
+    "go_name": "LunEclipseWhen",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ifltype",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lun_eclipse_when_loc",
+    "go_name": "LunEclipseWhenLoc",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_start",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ifl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 10
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "backward",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_pheno",
+    "go_name": "Pheno",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_pheno_ut",
+    "go_name": "PhenoUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "attr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 20
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_refrac",
+    "go_name": "Refrac",
+    "return": "float64",
+    "params": [
+      {
+        "name": "inalt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "calc_flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_refrac_extended",
+    "go_name": "RefracExtended",
+    "return": "float64",
+    "params": [
+      {
+        "name": "inalt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geoalt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "lapse_rate",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "calc_flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 4
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_lapse_rate",
+    "go_name": "SetLapseRate",
+    "return": "void",
+    "params": [
+      {
+        "name": "lapse_rate",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_azalt",
+    "go_name": "Azalt",
+    "return": "void",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "calc_flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "xin",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "xaz",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      }
+    ]
+  },
+  {
+    "c_name": "swe_azalt_rev",
+    "go_name": "AzaltRev",
+    "return": "void",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "calc_flag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "xin",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "xout",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      }
+    ]
+  },
+  {
+    "c_name": "swe_rise_trans_true_hor",
+    "go_name": "RiseTransTrueHor",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "epheflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "rsmi",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "horhgt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_rise_trans",
+    "go_name": "RiseTrans",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "starname",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      },
+      {
+        "name": "epheflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "rsmi",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "geopos",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "atpress",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "attemp",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "tret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_nod_aps",
+    "go_name": "NodAps",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "method",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xnasc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xndsc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xperi",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xaphe",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_nod_aps_ut",
+    "go_name": "NodApsUt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "method",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "xnasc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xndsc",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xperi",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xaphe",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_orbital_elements",
+    "go_name": "GetOrbitalElements",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dret",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 50
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_orbit_max_min_true_distance",
+    "go_name": "OrbitMaxMinTrueDistance",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_et",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "ipl",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "dmax",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "dmin",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "dtrue",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_deltat",
+    "go_name": "Deltat",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_deltat_ex",
+    "go_name": "DeltatEx",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "iflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_time_equ",
+    "go_name": "TimeEqu",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "te",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lmt_to_lat",
+    "go_name": "LmtToLat",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_lmt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "tjd_lat",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_lat_to_lmt",
+    "go_name": "LatToLmt",
+    "return": "int32",
+    "params": [
+      {
+        "name": "tjd_lat",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "geolon",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "tjd_lmt",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "serr",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sidtime0",
+    "go_name": "Sidtime0",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "nut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_sidtime",
+    "go_name": "Sidtime",
+    "return": "float64",
+    "params": [
+      {
+        "name": "tjd_ut",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_interpolate_nut",
+    "go_name": "SetInterpolateNut",
+    "return": "void",
+    "params": [
+      {
+        "name": "do_interpolate",
+        "ctype": "AS_BOOL",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_cotrans",
+    "go_name": "Cotrans",
+    "return": "void",
+    "params": [
+      {
+        "name": "xpo",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "xpn",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 3
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_cotrans_sp",
+    "go_name": "CotransSp",
+    "return": "void",
+    "params": [
+      {
+        "name": "xpo",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "xpn",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 6
+      },
+      {
+        "name": "eps",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_get_tid_acc",
+    "go_name": "GetTidAcc",
+    "return": "float64",
+    "params": []
+  },
+  {
+    "c_name": "swe_set_tid_acc",
+    "go_name": "SetTidAcc",
+    "return": "void",
+    "params": [
+      {
+        "name": "t_acc",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_set_delta_t_userdef",
+    "go_name": "SetDeltaTUserdef",
+    "return": "void",
+    "params": [
+      {
+        "name": "dt",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_degnorm",
+    "go_name": "Degnorm",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_radnorm",
+    "go_name": "Radnorm",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_rad_midp",
+    "go_name": "RadMidp",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x1",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "x0",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_deg_midp",
+    "go_name": "DegMidp",
+    "return": "float64",
+    "params": [
+      {
+        "name": "x1",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "x0",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_split_deg",
+    "go_name": "SplitDeg",
+    "return": "void",
+    "params": [
+      {
+        "name": "ddeg",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "roundflag",
+        "ctype": "int32",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "ideg",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "imin",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "isec",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      },
+      {
+        "name": "dsecfr",
+        "ctype": "double",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]float64",
+        "size": 1
+      },
+      {
+        "name": "isgn",
+        "ctype": "int32",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]int32",
+        "size": 1
+      }
+    ]
+  },
+  {
+    "c_name": "swe_csnorm",
+    "go_name": "Csnorm",
+    "return": "int32",
+    "params": [
+      {
+        "name": "p",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_difcsn",
+    "go_name": "Difcsn",
+    "return": "int32",
+    "params": [
+      {
+        "name": "p1",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "p2",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_difdegn",
+    "go_name": "Difdegn",
+    "return": "float64",
+    "params": [
+      {
+        "name": "p1",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "p2",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_difcs2n",
+    "go_name": "Difcs2N",
+    "return": "int32",
+    "params": [
+      {
+        "name": "p1",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "p2",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_difdeg2n",
+    "go_name": "Difdeg2N",
+    "return": "float64",
+    "params": [
+      {
+        "name": "p1",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "p2",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_difrad2n",
+    "go_name": "Difrad2N",
+    "return": "float64",
+    "params": [
+      {
+        "name": "p1",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      },
+      {
+        "name": "p2",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_csroundsec",
+    "go_name": "Csroundsec",
+    "return": "int32",
+    "params": [
+      {
+        "name": "x",
+        "ctype": "centisec",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_d2l",
+    "go_name": "D2L",
+    "return": "int32",
+    "params": [
+      {
+        "name": "x",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_day_of_week",
+    "go_name": "DayOfWeek",
+    "return": "int32",
+    "params": [
+      {
+        "name": "jd",
+        "ctype": "double",
+        "pointer": false,
+        "const": false,
+        "gotype": "float64"
+      }
+    ]
+  },
+  {
+    "c_name": "swe_cs2timestr",
+    "go_name": "Cs2Timestr",
+    "return": "string",
+    "params": [
+      {
+        "name": "t",
+        "ctype": "CSEC",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "sep",
+        "ctype": "int",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "suppressZero",
+        "ctype": "AS_BOOL",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "a",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_cs2lonlatstr",
+    "go_name": "Cs2Lonlatstr",
+    "return": "string",
+    "params": [
+      {
+        "name": "t",
+        "ctype": "CSEC",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "pchar",
+        "ctype": "char",
+        "pointer": false,
+        "const": false,
+        "gotype": "int8"
+      },
+      {
+        "name": "mchar",
+        "ctype": "char",
+        "pointer": false,
+        "const": false,
+        "gotype": "int8"
+      },
+      {
+        "name": "sValue",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  },
+  {
+    "c_name": "swe_cs2degstr",
+    "go_name": "Cs2Degstr",
+    "return": "string",
+    "params": [
+      {
+        "name": "t",
+        "ctype": "CSEC",
+        "pointer": false,
+        "const": false,
+        "gotype": "int32"
+      },
+      {
+        "name": "a",
+        "ctype": "char",
+        "pointer": true,
+        "const": false,
+        "gotype": "[]byte",
+        "size": 256
+      }
+    ]
+  }
+]

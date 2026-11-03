@@ -1,0 +1,7 @@
+{
+  "source": "https://ssd.jpl.nasa.gov/ftp/eph/planets/Linux/de200/lnxm1600p2170.200",
+  "downloaded_as": "de200.eph",
+  "bytes": 42958608,
+  "sha256": "6124297876b248a186a79fbb7b638a3654923a1622a86d5174bb224c5abfa5f0",
+  "note": "DE200 binary from NASA JPL; used for differential tests only, not redistributed."
+}

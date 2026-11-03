@@ -1,0 +1,10 @@
+*.test
+*.o
+*.o.go
+__pycache__/
+.agents-workspace/
+*.dylib
+*.so
+.DS_Store
+/.rein/
+/AGENTS.md

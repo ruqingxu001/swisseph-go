@@ -1,0 +1,5321 @@
+[
+  {
+    "id": "swe_heliacal_ut/basic",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "iflag": 258,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_heliacal_pheno_ut/basic",
+    "steps": [
+      {
+        "function": "swe_heliacal_pheno_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "helflag": 2,
+          "darr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_vis_limit_mag/basic",
+    "steps": [
+      {
+        "function": "swe_vis_limit_mag",
+        "args": {
+          "tjdut": 2451545.0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "helflag": 2,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_heliacal_angle/basic",
+    "steps": [
+      {
+        "function": "swe_heliacal_angle",
+        "args": {
+          "tjdut": 2451545.0,
+          "dgeo": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "helflag": 2,
+          "mag": 1.0,
+          "azi_obj": 100.0,
+          "azi_sun": 110.0,
+          "azi_moon": 80.0,
+          "alt_moon": 10.0,
+          "dret": [
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_topo_arcus_visionis/basic",
+    "steps": [
+      {
+        "function": "swe_topo_arcus_visionis",
+        "args": {
+          "tjdut": 2451545.0,
+          "dgeo": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "helflag": 2,
+          "mag": 1.0,
+          "azi_obj": 100.0,
+          "alt_obj": 5.0,
+          "azi_sun": 110.0,
+          "azi_moon": 80.0,
+          "alt_moon": 10.0,
+          "dret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_astro_models/basic",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_get_astro_models",
+        "args": {
+          "samod": "5,9,9,4,3,0,0,4",
+          "sdet": "",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_astro_models/basic",
+    "steps": [
+      {
+        "function": "swe_get_astro_models",
+        "args": {
+          "samod": "5,9,9,4,3,0,0,4",
+          "sdet": "",
+          "iflag": 258
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_version/basic",
+    "steps": [
+      {
+        "function": "swe_version",
+        "args": {
+          "buffer": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_library_path/basic",
+    "steps": [
+      {
+        "function": "swe_get_library_path",
+        "args": {
+          "buffer": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_calc/basic",
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_calc_ut/basic",
+    "steps": [
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_calc_pctr/basic",
+    "steps": [
+      {
+        "function": "swe_calc_pctr",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iplctr": 5,
+          "iflag": 258,
+          "xxret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_solcross/basic",
+    "steps": [
+      {
+        "function": "swe_solcross",
+        "args": {
+          "x2cross": 120.0,
+          "jd_et": 2451545.0,
+          "flag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_solcross_ut/basic",
+    "steps": [
+      {
+        "function": "swe_solcross_ut",
+        "args": {
+          "x2cross": 120.0,
+          "jd_ut": 2451545.0,
+          "flag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_mooncross/basic",
+    "steps": [
+      {
+        "function": "swe_mooncross",
+        "args": {
+          "x2cross": 120.0,
+          "jd_et": 2451545.0,
+          "flag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_mooncross_ut/basic",
+    "steps": [
+      {
+        "function": "swe_mooncross_ut",
+        "args": {
+          "x2cross": 120.0,
+          "jd_ut": 2451545.0,
+          "flag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_mooncross_node/basic",
+    "steps": [
+      {
+        "function": "swe_mooncross_node",
+        "args": {
+          "jd_et": 2451545.0,
+          "flag": 258,
+          "xlon": [
+            0
+          ],
+          "xlat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_mooncross_node_ut/basic",
+    "steps": [
+      {
+        "function": "swe_mooncross_node_ut",
+        "args": {
+          "jd_ut": 2451545.0,
+          "flag": 258,
+          "xlon": [
+            0
+          ],
+          "xlat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_helio_cross/basic",
+    "steps": [
+      {
+        "function": "swe_helio_cross",
+        "args": {
+          "ipl": 4,
+          "x2cross": 120.0,
+          "jd_et": 2451545.0,
+          "iflag": 258,
+          "dir": 1,
+          "jd_cross": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_helio_cross_ut/basic",
+    "steps": [
+      {
+        "function": "swe_helio_cross_ut",
+        "args": {
+          "ipl": 4,
+          "x2cross": 120.0,
+          "jd_ut": 2451545.0,
+          "iflag": 258,
+          "dir": 1,
+          "jd_cross": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar",
+        "args": {
+          "star": "Spica",
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar_ut/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar_ut",
+        "args": {
+          "star": "Spica",
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar_mag/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar_mag",
+        "args": {
+          "star": "Spica",
+          "mag": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar2/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar2",
+        "args": {
+          "star": "Spica",
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar2_ut/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar2_ut",
+        "args": {
+          "star": "Spica",
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar2_mag/basic",
+    "steps": [
+      {
+        "function": "swe_fixstar2_mag",
+        "args": {
+          "star": "Spica",
+          "mag": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_close/basic",
+    "steps": [
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_close",
+        "args": {}
+      },
+      {
+        "function": "swe_get_current_file_data",
+        "args": {
+          "ifno": 0,
+          "tfstart": [
+            0
+          ],
+          "tfend": [
+            0
+          ],
+          "denum": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_ephe_path/basic",
+    "steps": [
+      {
+        "function": "swe_set_ephe_path",
+        "args": {
+          "path": "@ephe"
+        }
+      },
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_jpl_file/basic",
+    "steps": [
+      {
+        "function": "swe_set_jpl_file",
+        "args": {
+          "fname": "de431.eph"
+        }
+      },
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 257,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_planet_name/basic",
+    "steps": [
+      {
+        "function": "swe_get_planet_name",
+        "args": {
+          "ipl": 4,
+          "spname": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_topo/basic",
+    "steps": [
+      {
+        "function": "swe_set_topo",
+        "args": {
+          "geolon": 121.4737,
+          "geolat": 31.2304,
+          "geoalt": 20
+        }
+      },
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 1,
+          "iflag": 33026,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_sid_mode/basic",
+    "steps": [
+      {
+        "function": "swe_set_sid_mode",
+        "args": {
+          "sid_mode": 1,
+          "t0": 2451545.0,
+          "ayan_t0": 24.0
+        }
+      },
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 65794,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_get_ayanamsa_ex",
+        "args": {
+          "tjd_et": 2451545.0,
+          "iflag": 258,
+          "daya": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_ayanamsa_ex/basic",
+    "steps": [
+      {
+        "function": "swe_get_ayanamsa_ex",
+        "args": {
+          "tjd_et": 2451545.0,
+          "iflag": 258,
+          "daya": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_ayanamsa_ex_ut/basic",
+    "steps": [
+      {
+        "function": "swe_get_ayanamsa_ex_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "daya": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_ayanamsa/basic",
+    "steps": [
+      {
+        "function": "swe_get_ayanamsa",
+        "args": {
+          "tjd_et": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_ayanamsa_ut/basic",
+    "steps": [
+      {
+        "function": "swe_get_ayanamsa_ut",
+        "args": {
+          "tjd_ut": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_ayanamsa_name/basic",
+    "steps": [
+      {
+        "function": "swe_get_ayanamsa_name",
+        "args": {
+          "isidmode": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_current_file_data/basic",
+    "steps": [
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_get_current_file_data",
+        "args": {
+          "ifno": 0,
+          "tfstart": [
+            0
+          ],
+          "tfend": [
+            0
+          ],
+          "denum": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_date_conversion/basic",
+    "steps": [
+      {
+        "function": "swe_date_conversion",
+        "args": {
+          "y": 2024,
+          "m": 2,
+          "d": 29,
+          "utime": 12.345,
+          "c": 103,
+          "tjd": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/basic",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 2024,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_revjul/basic",
+    "steps": [
+      {
+        "function": "swe_revjul",
+        "args": {
+          "jd": 2451545.0,
+          "gregflag": 1,
+          "jyear": [
+            0
+          ],
+          "jmon": [
+            0
+          ],
+          "jday": [
+            0
+          ],
+          "jut": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_utc_to_jd/basic",
+    "steps": [
+      {
+        "function": "swe_utc_to_jd",
+        "args": {
+          "iyear": 2024,
+          "imonth": 2,
+          "iday": 29,
+          "ihour": 12,
+          "imin": 34,
+          "dsec": 56.789,
+          "gregflag": 1,
+          "dret": [
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_jdet_to_utc/basic",
+    "steps": [
+      {
+        "function": "swe_jdet_to_utc",
+        "args": {
+          "tjd_et": 2451545.0,
+          "gregflag": 1,
+          "iyear": [
+            0
+          ],
+          "imonth": [
+            0
+          ],
+          "iday": [
+            0
+          ],
+          "ihour": [
+            0
+          ],
+          "imin": [
+            0
+          ],
+          "dsec": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_jdut1_to_utc/basic",
+    "steps": [
+      {
+        "function": "swe_jdut1_to_utc",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "gregflag": 1,
+          "iyear": [
+            0
+          ],
+          "imonth": [
+            0
+          ],
+          "iday": [
+            0
+          ],
+          "ihour": [
+            0
+          ],
+          "imin": [
+            0
+          ],
+          "dsec": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_utc_time_zone/basic",
+    "steps": [
+      {
+        "function": "swe_utc_time_zone",
+        "args": {
+          "iyear": 2024,
+          "imonth": 2,
+          "iday": 29,
+          "ihour": 12,
+          "imin": 34,
+          "dsec": 56.789,
+          "d_timezone": 5.5,
+          "iyear_out": [
+            0
+          ],
+          "imonth_out": [
+            0
+          ],
+          "iday_out": [
+            0
+          ],
+          "ihour_out": [
+            0
+          ],
+          "imin_out": [
+            0
+          ],
+          "dsec_out": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses/basic",
+    "steps": [
+      {
+        "function": "swe_houses",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_ex/basic",
+    "steps": [
+      {
+        "function": "swe_houses_ex",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_ex2/basic",
+    "steps": [
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_armc/basic",
+    "steps": [
+      {
+        "function": "swe_houses_armc",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2304,
+          "eps": 23.4392911,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_armc_ex2/basic",
+    "steps": [
+      {
+        "function": "swe_houses_armc_ex2",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2304,
+          "eps": 23.4392911,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_house_pos/basic",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2304,
+          "eps": 23.4392911,
+          "hsys": 80,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_house_name/basic",
+    "steps": [
+      {
+        "function": "swe_house_name",
+        "args": {
+          "hsys": 80
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_gauquelin_sector/basic",
+    "steps": [
+      {
+        "function": "swe_gauquelin_sector",
+        "args": {
+          "t_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "iflag": 258,
+          "imeth": 0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "dgsect": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sol_eclipse_where/basic",
+    "steps": [
+      {
+        "function": "swe_sol_eclipse_where",
+        "args": {
+          "tjd": 2460409.262,
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_occult_where/basic",
+    "steps": [
+      {
+        "function": "swe_lun_occult_where",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 3,
+          "starname": "",
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sol_eclipse_how/basic",
+    "steps": [
+      {
+        "function": "swe_sol_eclipse_how",
+        "args": {
+          "tjd": 2460409.262,
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sol_eclipse_when_loc/basic",
+    "steps": [
+      {
+        "function": "swe_sol_eclipse_when_loc",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_occult_when_loc/basic",
+    "steps": [
+      {
+        "function": "swe_lun_occult_when_loc",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ipl": 3,
+          "starname": "",
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sol_eclipse_when_glob/basic",
+    "steps": [
+      {
+        "function": "swe_sol_eclipse_when_glob",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ifl": 2,
+          "ifltype": 0,
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_occult_when_glob/basic",
+    "steps": [
+      {
+        "function": "swe_lun_occult_when_glob",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ipl": 3,
+          "starname": "",
+          "ifl": 2,
+          "ifltype": 0,
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_eclipse_how/basic",
+    "steps": [
+      {
+        "function": "swe_lun_eclipse_how",
+        "args": {
+          "tjd_ut": 2459891.958,
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_eclipse_when/basic",
+    "steps": [
+      {
+        "function": "swe_lun_eclipse_when",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ifl": 2,
+          "ifltype": 0,
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_eclipse_when_loc/basic",
+    "steps": [
+      {
+        "function": "swe_lun_eclipse_when_loc",
+        "args": {
+          "tjd_start": 2460310.5,
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "tret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "backward": 0,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_pheno/basic",
+    "steps": [
+      {
+        "function": "swe_pheno",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_pheno_ut/basic",
+    "steps": [
+      {
+        "function": "swe_pheno_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/basic",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 5.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/basic",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 5.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_lapse_rate/basic",
+    "steps": [
+      {
+        "function": "swe_set_lapse_rate",
+        "args": {
+          "lapse_rate": 0.0065
+        }
+      },
+      {
+        "function": "swe_azalt",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "calc_flag": 0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "xin": [
+            123.45,
+            2.1,
+            1.234
+          ],
+          "xaz": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_azalt/basic",
+    "steps": [
+      {
+        "function": "swe_azalt",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "calc_flag": 0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "xin": [
+            123.45,
+            2.1,
+            1.234
+          ],
+          "xaz": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_azalt_rev/basic",
+    "steps": [
+      {
+        "function": "swe_azalt_rev",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "calc_flag": 0,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "xin": [
+            123.45,
+            2.1,
+            1.234
+          ],
+          "xout": [
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rise_trans_true_hor/basic",
+    "steps": [
+      {
+        "function": "swe_rise_trans_true_hor",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 1,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "horhgt": 0.5,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rise_trans/basic",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 1,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_nod_aps/basic",
+    "steps": [
+      {
+        "function": "swe_nod_aps",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "method": 0,
+          "xnasc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xndsc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xperi": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xaphe": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_nod_aps_ut/basic",
+    "steps": [
+      {
+        "function": "swe_nod_aps_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "method": 0,
+          "xnasc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xndsc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xperi": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "xaphe": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_orbital_elements/basic",
+    "steps": [
+      {
+        "function": "swe_get_orbital_elements",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_orbit_max_min_true_distance/basic",
+    "steps": [
+      {
+        "function": "swe_orbit_max_min_true_distance",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 258,
+          "dmax": [
+            0
+          ],
+          "dmin": [
+            0
+          ],
+          "dtrue": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat/basic",
+    "steps": [
+      {
+        "function": "swe_deltat",
+        "args": {
+          "tjd": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat_ex/basic",
+    "steps": [
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_time_equ/basic",
+    "steps": [
+      {
+        "function": "swe_time_equ",
+        "args": {
+          "tjd": 2451545.0,
+          "te": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lmt_to_lat/basic",
+    "steps": [
+      {
+        "function": "swe_lmt_to_lat",
+        "args": {
+          "tjd_lmt": 2451545.0,
+          "geolon": 121.4737,
+          "tjd_lat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lat_to_lmt/basic",
+    "steps": [
+      {
+        "function": "swe_lat_to_lmt",
+        "args": {
+          "tjd_lat": 2451545.0,
+          "geolon": 121.4737,
+          "tjd_lmt": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime0/basic",
+    "steps": [
+      {
+        "function": "swe_sidtime0",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "eps": 23.4392911,
+          "nut": 0.003
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime/basic",
+    "steps": [
+      {
+        "function": "swe_sidtime",
+        "args": {
+          "tjd_ut": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_interpolate_nut/basic",
+    "steps": [
+      {
+        "function": "swe_set_interpolate_nut",
+        "args": {
+          "do_interpolate": 1
+        }
+      },
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": -1,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_cotrans/basic",
+    "steps": [
+      {
+        "function": "swe_cotrans",
+        "args": {
+          "xpo": [
+            123.45,
+            2.1,
+            1.234
+          ],
+          "xpn": [
+            0,
+            0,
+            0
+          ],
+          "eps": 23.4392911
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_cotrans_sp/basic",
+    "steps": [
+      {
+        "function": "swe_cotrans_sp",
+        "args": {
+          "xpo": [
+            123.45,
+            2.1,
+            1.234,
+            0.987,
+            0.012,
+            0.003
+          ],
+          "xpn": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "eps": 23.4392911
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_get_tid_acc/basic",
+    "steps": [
+      {
+        "function": "swe_get_tid_acc",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "id": "swe_set_tid_acc/basic",
+    "steps": [
+      {
+        "function": "swe_set_tid_acc",
+        "args": {
+          "t_acc": -25.8
+        }
+      },
+      {
+        "function": "swe_get_tid_acc",
+        "args": {}
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2415020.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_set_delta_t_userdef/basic",
+    "steps": [
+      {
+        "function": "swe_set_delta_t_userdef",
+        "args": {
+          "dt": 0.0008
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/basic",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": -12.345678
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/basic",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": -12.345678
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/basic",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 350.0,
+          "x0": 10.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/basic",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 350.0,
+          "x0": 10.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_split_deg/basic",
+    "steps": [
+      {
+        "function": "swe_split_deg",
+        "args": {
+          "ddeg": 123.456789,
+          "roundflag": 0,
+          "ideg": [
+            0
+          ],
+          "imin": [
+            0
+          ],
+          "isec": [
+            0
+          ],
+          "dsecfr": [
+            0
+          ],
+          "isgn": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_csnorm/basic",
+    "steps": [
+      {
+        "function": "swe_csnorm",
+        "args": {
+          "p": -123456
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difcsn/basic",
+    "steps": [
+      {
+        "function": "swe_difcsn",
+        "args": {
+          "p1": 123456,
+          "p2": 789012
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/basic",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 123456,
+          "p2": 789012
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difcs2n/basic",
+    "steps": [
+      {
+        "function": "swe_difcs2n",
+        "args": {
+          "p1": 123456,
+          "p2": 789012
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/basic",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 123456,
+          "p2": 789012
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/basic",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 123456,
+          "p2": 789012
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_csroundsec/basic",
+    "steps": [
+      {
+        "function": "swe_csroundsec",
+        "args": {
+          "x": -12
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/basic",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": -12.345678
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_day_of_week/basic",
+    "steps": [
+      {
+        "function": "swe_day_of_week",
+        "args": {
+          "jd": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_cs2timestr/basic",
+    "steps": [
+      {
+        "function": "swe_cs2timestr",
+        "args": {
+          "t": 12345678,
+          "sep": 58,
+          "suppressZero": 0,
+          "a": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_cs2lonlatstr/basic",
+    "steps": [
+      {
+        "function": "swe_cs2lonlatstr",
+        "args": {
+          "t": 12345678,
+          "pchar": 69,
+          "mchar": 87,
+          "sValue": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_cs2degstr/basic",
+    "steps": [
+      {
+        "function": "swe_cs2degstr",
+        "args": {
+          "t": 12345678,
+          "a": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_calc_ut/invalid_body",
+    "steps": [
+      {
+        "function": "swe_calc_ut",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 1000000000,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_utc_to_jd/leap_second",
+    "steps": [
+      {
+        "function": "swe_utc_to_jd",
+        "args": {
+          "iyear": 2016,
+          "imonth": 12,
+          "iday": 31,
+          "ihour": 23,
+          "imin": 59,
+          "dsec": 60,
+          "gregflag": 1,
+          "dret": [
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_utc_to_jd/invalid_date",
+    "steps": [
+      {
+        "function": "swe_utc_to_jd",
+        "args": {
+          "iyear": 2023,
+          "imonth": 2,
+          "iday": 29,
+          "ihour": 12,
+          "imin": 34,
+          "dsec": 56.789,
+          "gregflag": 1,
+          "dret": [
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_date_conversion/invalid_date",
+    "steps": [
+      {
+        "function": "swe_date_conversion",
+        "args": {
+          "y": 2023,
+          "m": 2,
+          "d": 29,
+          "utime": 12.345,
+          "c": 103,
+          "tjd": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_fixstar2_ut/missing_star",
+    "steps": [
+      {
+        "function": "swe_fixstar2_ut",
+        "args": {
+          "star": "not_a_real_star_abcdef",
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_ex2/polar_error",
+    "steps": [
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "geolat": 70,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_ex2/gauquelin_36",
+    "steps": [
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 258,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 71,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_houses_ex2/lahiri",
+    "steps": [
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 65538,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_split_deg/round_boundary",
+    "steps": [
+      {
+        "function": "swe_split_deg",
+        "args": {
+          "ddeg": 359.999999,
+          "roundflag": 1,
+          "ideg": [
+            0
+          ],
+          "imin": [
+            0
+          ],
+          "isec": [
+            0
+          ],
+          "dsecfr": [
+            0
+          ],
+          "isgn": [
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_day_of_week/calendar_boundary",
+    "steps": [
+      {
+        "function": "swe_day_of_week",
+        "args": {
+          "jd": 2299160.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": -1080.1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": -1080.1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": -1080
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": -1080.1,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": -1080.1,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": -1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": -1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_-1080.1",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": -1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": -360.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": -360.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": -360
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": -360.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": -360.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": -360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": -360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_-360.0",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": -360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": -1e-06
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": -1e-06
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": -1e-06,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": -1e-06,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": -1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": -1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_-1e-06",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": -1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 0.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 0.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 0.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 0.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 0.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_0.0",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 0.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 1e-06
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 1e-06
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 1e-06,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 1e-06,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_1e-06",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 1e-06,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 179.999999
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 179.999999
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 179
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 179.999999,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 179.999999,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 179.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 179.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_179.999999",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 179.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 180.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 180.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 180
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 180.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 180.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 180.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 180.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_180.0",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 180.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 359.999999
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 359.999999
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 359
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 359.999999,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 359.999999,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 359.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 359.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_359.999999",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 359.999999,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 360.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 360.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 360
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 360.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 360.0,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_360.0",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 360.0,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_degnorm/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_degnorm",
+        "args": {
+          "x": 1080.1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_radnorm/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_radnorm",
+        "args": {
+          "x": 1080.1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_d2l/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_d2l",
+        "args": {
+          "x": 1080
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deg_midp/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_deg_midp",
+        "args": {
+          "x1": 1080.1,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_rad_midp/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_rad_midp",
+        "args": {
+          "x1": 1080.1,
+          "x0": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdegn/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_difdegn",
+        "args": {
+          "p1": 1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difdeg2n/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_difdeg2n",
+        "args": {
+          "p1": 1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_difrad2n/boundary_1080.1",
+    "steps": [
+      {
+        "function": "swe_difrad2n",
+        "args": {
+          "p1": 1080.1,
+          "p2": -12.345
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_-4000_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": -4000,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_-4000_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": -4000,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_-1_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": -1,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_-1_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": -1,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_0_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 0,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_0_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 0,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_1582_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 1582,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_1582_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 1582,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_1900_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 1900,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_1900_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 1900,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_2000_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 2000,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_2000_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 2000,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_2100_0",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 2100,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_julday/year_2100_1",
+    "steps": [
+      {
+        "function": "swe_julday",
+        "args": {
+          "year": 2100,
+          "month": 2,
+          "day": 29,
+          "hour": 12.345,
+          "gregflag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_-5.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": -5.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_-5.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": -5.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_-5.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": -5.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_-5.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": -5.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_-0.1_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": -0.1,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_-0.1_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": -0.1,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_-0.1_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": -0.1,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_-0.1_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": -0.1,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_0.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 0.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_0.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 0.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_0.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 0.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_0.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 0.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_5.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 5.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_5.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 5.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_5.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 5.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_5.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 5.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_45.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 45.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_45.0_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 45.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_45.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 45.0,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_45.0_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 45.0,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_89.9_0",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 89.9,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_89.9_0",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 89.9,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 0,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac/altitude_89.9_1",
+    "steps": [
+      {
+        "function": "swe_refrac",
+        "args": {
+          "inalt": 89.9,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "calc_flag": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_refrac_extended/altitude_89.9_1",
+    "steps": [
+      {
+        "function": "swe_refrac_extended",
+        "args": {
+          "inalt": 89.9,
+          "geoalt": 20,
+          "atpress": 1013.25,
+          "attemp": 15,
+          "lapse_rate": 0.0065,
+          "calc_flag": 1,
+          "dret": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_sidtime",
+        "args": {
+          "tjd_ut": 2415020.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime0/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_sidtime0",
+        "args": {
+          "tjd_ut": 2415020.5,
+          "eps": 23.4392911,
+          "nut": 0.003
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_deltat",
+        "args": {
+          "tjd": 2415020.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat_ex/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2415020.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_time_equ/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_time_equ",
+        "args": {
+          "tjd": 2415020.5,
+          "te": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lmt_to_lat/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_lmt_to_lat",
+        "args": {
+          "tjd_lmt": 2415020.5,
+          "geolon": 121.4737,
+          "tjd_lat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lat_to_lmt/time_2415020.5",
+    "steps": [
+      {
+        "function": "swe_lat_to_lmt",
+        "args": {
+          "tjd_lat": 2415020.5,
+          "geolon": 121.4737,
+          "tjd_lmt": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_sidtime",
+        "args": {
+          "tjd_ut": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime0/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_sidtime0",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "eps": 23.4392911,
+          "nut": 0.003
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_deltat",
+        "args": {
+          "tjd": 2451545.0
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat_ex/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2451545.0,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_time_equ/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_time_equ",
+        "args": {
+          "tjd": 2451545.0,
+          "te": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lmt_to_lat/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_lmt_to_lat",
+        "args": {
+          "tjd_lmt": 2451545.0,
+          "geolon": 121.4737,
+          "tjd_lat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lat_to_lmt/time_2451545.0",
+    "steps": [
+      {
+        "function": "swe_lat_to_lmt",
+        "args": {
+          "tjd_lat": 2451545.0,
+          "geolon": 121.4737,
+          "tjd_lmt": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_sidtime",
+        "args": {
+          "tjd_ut": 2460310.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_sidtime0/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_sidtime0",
+        "args": {
+          "tjd_ut": 2460310.5,
+          "eps": 23.4392911,
+          "nut": 0.003
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_deltat",
+        "args": {
+          "tjd": 2460310.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_deltat_ex/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2460310.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_time_equ/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_time_equ",
+        "args": {
+          "tjd": 2460310.5,
+          "te": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lmt_to_lat/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_lmt_to_lat",
+        "args": {
+          "tjd_lmt": 2460310.5,
+          "geolon": 121.4737,
+          "tjd_lat": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lat_to_lmt/time_2460310.5",
+    "steps": [
+      {
+        "function": "swe_lat_to_lmt",
+        "args": {
+          "tjd_lat": 2460310.5,
+          "geolon": 121.4737,
+          "tjd_lmt": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "swe_lun_occult_where/at_event",
+    "steps": [
+      {
+        "function": "swe_lun_occult_where",
+        "args": {
+          "tjd": 2460408.1792892623,
+          "ipl": 3,
+          "starname": "",
+          "ifl": 2,
+          "geopos": [
+            8.55,
+            47.37,
+            408,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "attr": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  }
+]
