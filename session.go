@@ -2,22 +2,18 @@
 package swisseph
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 	"strings"
 	"sync"
-	"unsafe"
-
-	"modernc.org/libc"
-	"modernc.org/libc/sys/types"
 )
 
 // Session exposes the complete public C API with checked Go buffers. Obtain it
-// through WithSession. C return codes and serr buffers are preserved; a Go error
-// means invalid buffers, non-finite input, a closed session or allocation failure.
-// Never call Engine methods or nest WithSession inside its callback: the callback
-// already owns the global engine lock. Use the Session methods throughout.
-// Buffers are copied into independent native-layout allocations. Do not rely on
+// through WithSession. Swiss Ephemeris return codes and serr buffers are preserved; a Go error
+// means invalid buffers, non-finite input or a closed session. Each callback owns
+// its calculation state; nested Engine operations use a separate state.
+// Buffers are copied into independent Go slices. Do not rely on
 // overlapping buffers aliasing as they would in C. Callers own buffer synchronization.
 // Methods preserve C domain rules; this is not a validator for arbitrary C inputs.
 type Session struct {
@@ -52,32 +48,13 @@ func (s *Session) enter() error {
 func invalidNumber(name string) error { return fmt.Errorf("%s must be finite", name) }
 
 type frame struct {
-	tls  *libc.TLS
-	ptrs []uintptr
 	back []func()
 	err  error
 }
 
-func (f *frame) alloc(size int) uintptr {
-	if f.err != nil {
-		return 0
-	}
-	p := libc.Xcalloc(f.tls, 1, types.Size_t(size))
-	if p == 0 {
-		f.err = errors.New("ephemeris allocation failed")
-		return 0
-	}
-	f.ptrs = append(f.ptrs, p)
-	return p
-}
-func (f *frame) close() {
-	for _, p := range f.ptrs {
-		libc.Xfree(f.tls, p)
-	}
-}
 func (f *frame) copyBack() {
-	for _, fn := range f.back {
-		fn()
+	for _, copy := range f.back {
+		copy()
 	}
 }
 func (f *frame) length(name string, got, min int) bool {
@@ -87,69 +64,41 @@ func (f *frame) length(name string, got, min int) bool {
 	}
 	return f.err == nil
 }
-func (f *frame) text(name, value string, max int) uintptr {
+func (f *frame) text(name, value string, max int) string {
 	if len(value) > max || strings.IndexByte(value, 0) >= 0 {
 		f.err = fmt.Errorf("%s must be NUL-free and at most %d bytes", name, max)
-		return 0
 	}
-	p := f.alloc(len(value) + 1)
-	if p != 0 {
-		copy(unsafe.Slice((*byte)(unsafe.Pointer(p)), len(value)+1), value)
-	}
-	return p
+	return value
 }
-func (f *frame) bytes(name string, value []byte, min int) uintptr {
+func (f *frame) bytes(name string, value []byte, min int) []byte {
 	if !f.length(name, len(value), min) {
-		return 0
+		return nil
 	}
-	// C string arguments must be terminated within the checked buffer.
-	terminated := false
-	for _, v := range value {
-		if v == 0 {
-			terminated = true
-			break
-		}
-	}
-	if !terminated {
+	if !bytes.Contains(value, []byte{0}) {
 		f.err = fmt.Errorf("%s requires a NUL terminator", name)
-		return 0
+		return nil
 	}
-	p := f.alloc(len(value))
-	if p == 0 {
-		return 0
-	}
-	buffer := unsafe.Slice((*byte)(unsafe.Pointer(p)), len(value))
-	copy(buffer, value)
+	buffer := append([]byte(nil), value...)
 	f.back = append(f.back, func() { copy(value, buffer) })
-	return p
+	return buffer
 }
-func (f *frame) doubles(name string, value []float64, min int) uintptr {
+func (f *frame) doubles(name string, value []float64, min int) []float64 {
 	if !f.length(name, len(value), min) {
-		return 0
+		return nil
 	}
 	if !finite(value...) {
 		f.err = invalidNumber(name)
-		return 0
+		return nil
 	}
-	p := f.alloc(len(value) * 8)
-	if p == 0 {
-		return 0
-	}
-	buffer := unsafe.Slice((*float64)(unsafe.Pointer(p)), len(value))
-	copy(buffer, value)
+	buffer := append([]float64(nil), value...)
 	f.back = append(f.back, func() { copy(value, buffer) })
-	return p
+	return buffer
 }
-func (f *frame) ints(name string, value []int32, min int) uintptr {
+func (f *frame) ints(name string, value []int32, min int) []int32 {
 	if !f.length(name, len(value), min) {
-		return 0
+		return nil
 	}
-	p := f.alloc(len(value) * 4)
-	if p == 0 {
-		return 0
-	}
-	buffer := unsafe.Slice((*int32)(unsafe.Pointer(p)), len(value))
-	copy(buffer, value)
+	buffer := append([]int32(nil), value...)
 	f.back = append(f.back, func() { copy(value, buffer) })
-	return p
+	return buffer
 }

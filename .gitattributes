@@ -1,4 +1,17 @@
-# Preserve the exact bytes covered by the data checksum manifests.
-ephe/** -text
-ephe/**/*.se1 binary
-testdata/jpl/*.eph binary
+* text=auto
+/.gitattributes text eol=lf
+*.go text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.sha256 text eol=lf
+/validation/*.dart text eol=lf
+
+# Checksummed reference sources, data and captured output must retain their bytes.
+/upstream/** -text
+/ephe/** -text
+/ephe/**/*.se1 binary
+/testdata/jpl/** -text
+/testdata/jpl/*.eph binary
+/testdata/flutter/*.jsonl -text

@@ -1,7 +1,7 @@
 //go:build differential
 
 // SPDX-License-Identifier: AGPL-3.0-only
-package raw
+package ephemeris
 
 import (
 	"bytes"
@@ -64,7 +64,14 @@ int main(void){char s[1024];setlocale(LC_NUMERIC,"C");while(fgets(s,sizeof(s),st
 			}
 		}
 		got := parseCFloat(cases[i])
-		if !(math.IsNaN(got) && math.IsNaN(want)) && got != want || math.Signbit(got) != negative {
+		// NaN payload and sign are not specified by C.
+		if math.IsNaN(want) {
+			if !math.IsNaN(got) {
+				t.Errorf("%q: expected NaN", cases[i])
+			}
+			continue
+		}
+		if got != want || math.Signbit(got) != negative {
 			t.Error(fmt.Sprintf("%q: got %v sign=%v native %s", cases[i], got, math.Signbit(got), line))
 		}
 	}

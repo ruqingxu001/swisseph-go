@@ -2,20 +2,14 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 package swisseph
 
-import (
-	"github.com/ruqingxu001/swisseph-go/internal/raw"
-	"modernc.org/libc"
-)
-
 // HeliacalUt calls swe_heliacal_ut. Buffer lengths: geopos >= 3, datm >= 4, dobs >= 6, ObjectName >= 256, dret >= 50, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HeliacalUt(tjdstart_ut float64, geopos []float64, datm []float64, dobs []float64, ObjectName []byte, TypeEvent int32, iflag int32, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjdstart_ut) {
 		err = invalidNumber("tjdstart_ut")
 		return
@@ -30,20 +24,19 @@ func (s *Session) HeliacalUt(tjdstart_ut float64, geopos []float64, datm []float
 		err = f.err
 		return
 	}
-	result = raw.Xswe_heliacal_ut(s.c.tls, tjdstart_ut, p_geopos, p_datm, p_dobs, p_ObjectName, TypeEvent, iflag, p_dret, p_serr)
+	result = s.c.state.HeliacalUt(tjdstart_ut, p_geopos, p_datm, p_dobs, p_ObjectName, TypeEvent, iflag, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // HeliacalPhenoUt calls swe_heliacal_pheno_ut. Buffer lengths: geopos >= 3, datm >= 4, dobs >= 6, ObjectName >= 256, darr >= 50, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HeliacalPhenoUt(tjd_ut float64, geopos []float64, datm []float64, dobs []float64, ObjectName []byte, TypeEvent int32, helflag int32, darr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -58,20 +51,19 @@ func (s *Session) HeliacalPhenoUt(tjd_ut float64, geopos []float64, datm []float
 		err = f.err
 		return
 	}
-	result = raw.Xswe_heliacal_pheno_ut(s.c.tls, tjd_ut, p_geopos, p_datm, p_dobs, p_ObjectName, TypeEvent, helflag, p_darr, p_serr)
+	result = s.c.state.HeliacalPhenoUt(tjd_ut, p_geopos, p_datm, p_dobs, p_ObjectName, TypeEvent, helflag, p_darr, p_serr)
 	f.copyBack()
 	return
 }
 
 // VisLimitMag calls swe_vis_limit_mag. Buffer lengths: geopos >= 3, datm >= 4, dobs >= 6, ObjectName >= 256, dret >= 8, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) VisLimitMag(tjdut float64, geopos []float64, datm []float64, dobs []float64, ObjectName []byte, helflag int32, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjdut) {
 		err = invalidNumber("tjdut")
 		return
@@ -86,20 +78,19 @@ func (s *Session) VisLimitMag(tjdut float64, geopos []float64, datm []float64, d
 		err = f.err
 		return
 	}
-	result = raw.Xswe_vis_limit_mag(s.c.tls, tjdut, p_geopos, p_datm, p_dobs, p_ObjectName, helflag, p_dret, p_serr)
+	result = s.c.state.VisLimitMag(tjdut, p_geopos, p_datm, p_dobs, p_ObjectName, helflag, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // HeliacalAngle calls swe_heliacal_angle. Buffer lengths: dgeo >= 3, datm >= 4, dobs >= 6, dret >= 3, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HeliacalAngle(tjdut float64, dgeo []float64, datm []float64, dobs []float64, helflag int32, mag float64, azi_obj float64, azi_sun float64, azi_moon float64, alt_moon float64, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjdut) {
 		err = invalidNumber("tjdut")
 		return
@@ -133,20 +124,19 @@ func (s *Session) HeliacalAngle(tjdut float64, dgeo []float64, datm []float64, d
 		err = f.err
 		return
 	}
-	result = raw.Xswe_heliacal_angle(s.c.tls, tjdut, p_dgeo, p_datm, p_dobs, helflag, mag, azi_obj, azi_sun, azi_moon, alt_moon, p_dret, p_serr)
+	result = s.c.state.HeliacalAngle(tjdut, p_dgeo, p_datm, p_dobs, helflag, mag, azi_obj, azi_sun, azi_moon, alt_moon, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // TopoArcusVisionis calls swe_topo_arcus_visionis. Buffer lengths: dgeo >= 3, datm >= 4, dobs >= 6, dret >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) TopoArcusVisionis(tjdut float64, dgeo []float64, datm []float64, dobs []float64, helflag int32, mag float64, azi_obj float64, alt_obj float64, azi_sun float64, azi_moon float64, alt_moon float64, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjdut) {
 		err = invalidNumber("tjdut")
 		return
@@ -184,97 +174,92 @@ func (s *Session) TopoArcusVisionis(tjdut float64, dgeo []float64, datm []float6
 		err = f.err
 		return
 	}
-	result = raw.Xswe_topo_arcus_visionis(s.c.tls, tjdut, p_dgeo, p_datm, p_dobs, helflag, mag, azi_obj, alt_obj, azi_sun, azi_moon, alt_moon, p_dret, p_serr)
+	result = s.c.state.TopoArcusVisionis(tjdut, p_dgeo, p_datm, p_dobs, helflag, mag, azi_obj, alt_obj, azi_sun, azi_moon, alt_moon, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // SetAstroModels calls swe_set_astro_models. Buffer lengths: samod >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetAstroModels(samod []byte, iflag int32) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_samod := f.bytes("samod", samod, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_astro_models(s.c.tls, p_samod, iflag)
+	s.c.state.SetAstroModels(p_samod, iflag)
 	f.copyBack()
 	return
 }
 
 // GetAstroModels calls swe_get_astro_models. Buffer lengths: samod >= 256, sdet >= 8192.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAstroModels(samod []byte, sdet []byte, iflag int32) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_samod := f.bytes("samod", samod, 256)
 	p_sdet := f.bytes("sdet", sdet, 8192)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_get_astro_models(s.c.tls, p_samod, p_sdet, iflag)
+	s.c.state.GetAstroModels(p_samod, p_sdet, iflag)
 	f.copyBack()
 	return
 }
 
 // Version calls swe_version. Buffer lengths: buffer >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Version(buffer []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_buffer := f.bytes("buffer", buffer, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_version(s.c.tls, p_buffer))
+	result = s.c.state.Version(p_buffer)
 	f.copyBack()
 	return
 }
 
 // GetLibraryPath calls swe_get_library_path. Buffer lengths: buffer >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetLibraryPath(buffer []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_buffer := f.bytes("buffer", buffer, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_get_library_path(s.c.tls, p_buffer))
+	result = s.c.state.GetLibraryPath(p_buffer)
 	f.copyBack()
 	return
 }
 
 // Calc calls swe_calc. Buffer lengths: xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Calc(tjd float64, ipl int32, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -285,20 +270,19 @@ func (s *Session) Calc(tjd float64, ipl int32, iflag int32, xx []float64, serr [
 		err = f.err
 		return
 	}
-	result = raw.Xswe_calc(s.c.tls, tjd, ipl, iflag, p_xx, p_serr)
+	result = s.c.state.Calc(tjd, ipl, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // CalcUt calls swe_calc_ut. Buffer lengths: xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) CalcUt(tjd_ut float64, ipl int32, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -309,20 +293,19 @@ func (s *Session) CalcUt(tjd_ut float64, ipl int32, iflag int32, xx []float64, s
 		err = f.err
 		return
 	}
-	result = raw.Xswe_calc_ut(s.c.tls, tjd_ut, ipl, iflag, p_xx, p_serr)
+	result = s.c.state.CalcUt(tjd_ut, ipl, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // CalcPctr calls swe_calc_pctr. Buffer lengths: xxret >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) CalcPctr(tjd float64, ipl int32, iplctr int32, iflag int32, xxret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -333,20 +316,19 @@ func (s *Session) CalcPctr(tjd float64, ipl int32, iplctr int32, iflag int32, xx
 		err = f.err
 		return
 	}
-	result = raw.Xswe_calc_pctr(s.c.tls, tjd, ipl, iplctr, iflag, p_xxret, p_serr)
+	result = s.c.state.CalcPctr(tjd, ipl, iplctr, iflag, p_xxret, p_serr)
 	f.copyBack()
 	return
 }
 
 // Solcross calls swe_solcross. Buffer lengths: serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Solcross(x2cross float64, jd_et float64, flag int32, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -360,20 +342,19 @@ func (s *Session) Solcross(x2cross float64, jd_et float64, flag int32, serr []by
 		err = f.err
 		return
 	}
-	result = raw.Xswe_solcross(s.c.tls, x2cross, jd_et, flag, p_serr)
+	result = s.c.state.Solcross(x2cross, jd_et, flag, p_serr)
 	f.copyBack()
 	return
 }
 
 // SolcrossUt calls swe_solcross_ut. Buffer lengths: serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SolcrossUt(x2cross float64, jd_ut float64, flag int32, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -387,20 +368,19 @@ func (s *Session) SolcrossUt(x2cross float64, jd_ut float64, flag int32, serr []
 		err = f.err
 		return
 	}
-	result = raw.Xswe_solcross_ut(s.c.tls, x2cross, jd_ut, flag, p_serr)
+	result = s.c.state.SolcrossUt(x2cross, jd_ut, flag, p_serr)
 	f.copyBack()
 	return
 }
 
 // Mooncross calls swe_mooncross. Buffer lengths: serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Mooncross(x2cross float64, jd_et float64, flag int32, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -414,20 +394,19 @@ func (s *Session) Mooncross(x2cross float64, jd_et float64, flag int32, serr []b
 		err = f.err
 		return
 	}
-	result = raw.Xswe_mooncross(s.c.tls, x2cross, jd_et, flag, p_serr)
+	result = s.c.state.Mooncross(x2cross, jd_et, flag, p_serr)
 	f.copyBack()
 	return
 }
 
 // MooncrossUt calls swe_mooncross_ut. Buffer lengths: serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) MooncrossUt(x2cross float64, jd_ut float64, flag int32, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -441,20 +420,19 @@ func (s *Session) MooncrossUt(x2cross float64, jd_ut float64, flag int32, serr [
 		err = f.err
 		return
 	}
-	result = raw.Xswe_mooncross_ut(s.c.tls, x2cross, jd_ut, flag, p_serr)
+	result = s.c.state.MooncrossUt(x2cross, jd_ut, flag, p_serr)
 	f.copyBack()
 	return
 }
 
 // MooncrossNode calls swe_mooncross_node. Buffer lengths: xlon >= 1, xlat >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) MooncrossNode(jd_et float64, flag int32, xlon []float64, xlat []float64, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(jd_et) {
 		err = invalidNumber("jd_et")
 		return
@@ -466,20 +444,19 @@ func (s *Session) MooncrossNode(jd_et float64, flag int32, xlon []float64, xlat 
 		err = f.err
 		return
 	}
-	result = raw.Xswe_mooncross_node(s.c.tls, jd_et, flag, p_xlon, p_xlat, p_serr)
+	result = s.c.state.MooncrossNode(jd_et, flag, p_xlon, p_xlat, p_serr)
 	f.copyBack()
 	return
 }
 
 // MooncrossNodeUt calls swe_mooncross_node_ut. Buffer lengths: xlon >= 1, xlat >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) MooncrossNodeUt(jd_ut float64, flag int32, xlon []float64, xlat []float64, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(jd_ut) {
 		err = invalidNumber("jd_ut")
 		return
@@ -491,20 +468,19 @@ func (s *Session) MooncrossNodeUt(jd_ut float64, flag int32, xlon []float64, xla
 		err = f.err
 		return
 	}
-	result = raw.Xswe_mooncross_node_ut(s.c.tls, jd_ut, flag, p_xlon, p_xlat, p_serr)
+	result = s.c.state.MooncrossNodeUt(jd_ut, flag, p_xlon, p_xlat, p_serr)
 	f.copyBack()
 	return
 }
 
 // HelioCross calls swe_helio_cross. Buffer lengths: jd_cross >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HelioCross(ipl int32, x2cross float64, jd_et float64, iflag int32, dir int32, jd_cross []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -519,20 +495,19 @@ func (s *Session) HelioCross(ipl int32, x2cross float64, jd_et float64, iflag in
 		err = f.err
 		return
 	}
-	result = raw.Xswe_helio_cross(s.c.tls, ipl, x2cross, jd_et, iflag, dir, p_jd_cross, p_serr)
+	result = s.c.state.HelioCross(ipl, x2cross, jd_et, iflag, dir, p_jd_cross, p_serr)
 	f.copyBack()
 	return
 }
 
 // HelioCrossUt calls swe_helio_cross_ut. Buffer lengths: jd_cross >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HelioCrossUt(ipl int32, x2cross float64, jd_ut float64, iflag int32, dir int32, jd_cross []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x2cross) {
 		err = invalidNumber("x2cross")
 		return
@@ -547,20 +522,19 @@ func (s *Session) HelioCrossUt(ipl int32, x2cross float64, jd_ut float64, iflag 
 		err = f.err
 		return
 	}
-	result = raw.Xswe_helio_cross_ut(s.c.tls, ipl, x2cross, jd_ut, iflag, dir, p_jd_cross, p_serr)
+	result = s.c.state.HelioCrossUt(ipl, x2cross, jd_ut, iflag, dir, p_jd_cross, p_serr)
 	f.copyBack()
 	return
 }
 
 // Fixstar calls swe_fixstar. Buffer lengths: star >= 256, xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Fixstar(star []byte, tjd float64, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
@@ -572,20 +546,19 @@ func (s *Session) Fixstar(star []byte, tjd float64, iflag int32, xx []float64, s
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar(s.c.tls, p_star, tjd, iflag, p_xx, p_serr)
+	result = s.c.state.Fixstar(p_star, tjd, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // FixstarUt calls swe_fixstar_ut. Buffer lengths: star >= 256, xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) FixstarUt(star []byte, tjd_ut float64, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
@@ -597,20 +570,19 @@ func (s *Session) FixstarUt(star []byte, tjd_ut float64, iflag int32, xx []float
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar_ut(s.c.tls, p_star, tjd_ut, iflag, p_xx, p_serr)
+	result = s.c.state.FixstarUt(p_star, tjd_ut, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // FixstarMag calls swe_fixstar_mag. Buffer lengths: star >= 256, mag >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) FixstarMag(star []byte, mag []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	p_mag := f.doubles("mag", mag, 1)
 	p_serr := f.bytes("serr", serr, 256)
@@ -618,20 +590,19 @@ func (s *Session) FixstarMag(star []byte, mag []float64, serr []byte) (result in
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar_mag(s.c.tls, p_star, p_mag, p_serr)
+	result = s.c.state.FixstarMag(p_star, p_mag, p_serr)
 	f.copyBack()
 	return
 }
 
 // Fixstar2 calls swe_fixstar2. Buffer lengths: star >= 256, xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Fixstar2(star []byte, tjd float64, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
@@ -643,20 +614,19 @@ func (s *Session) Fixstar2(star []byte, tjd float64, iflag int32, xx []float64, 
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar2(s.c.tls, p_star, tjd, iflag, p_xx, p_serr)
+	result = s.c.state.Fixstar2(p_star, tjd, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // Fixstar2Ut calls swe_fixstar2_ut. Buffer lengths: star >= 256, xx >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Fixstar2Ut(star []byte, tjd_ut float64, iflag int32, xx []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
@@ -668,20 +638,19 @@ func (s *Session) Fixstar2Ut(star []byte, tjd_ut float64, iflag int32, xx []floa
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar2_ut(s.c.tls, p_star, tjd_ut, iflag, p_xx, p_serr)
+	result = s.c.state.Fixstar2Ut(p_star, tjd_ut, iflag, p_xx, p_serr)
 	f.copyBack()
 	return
 }
 
 // Fixstar2Mag calls swe_fixstar2_mag. Buffer lengths: star >= 256, mag >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Fixstar2Mag(star []byte, mag []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_star := f.bytes("star", star, 256)
 	p_mag := f.doubles("mag", mag, 1)
 	p_serr := f.bytes("serr", serr, 256)
@@ -689,95 +658,90 @@ func (s *Session) Fixstar2Mag(star []byte, mag []float64, serr []byte) (result i
 		err = f.err
 		return
 	}
-	result = raw.Xswe_fixstar2_mag(s.c.tls, p_star, p_mag, p_serr)
+	result = s.c.state.Fixstar2Mag(p_star, p_mag, p_serr)
 	f.copyBack()
 	return
 }
 
 // Close calls swe_close.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Close() (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_close(s.c.tls)
+	s.c.state.Close()
 	f.copyBack()
 	return
 }
 
 // SetEphePath calls swe_set_ephe_path.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetEphePath(path string) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_path := f.text("path", path, 230)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_ephe_path(s.c.tls, p_path)
+	s.c.state.SetEphePath(p_path)
 	f.copyBack()
 	return
 }
 
 // SetJplFile calls swe_set_jpl_file.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetJplFile(fname string) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_fname := f.text("fname", fname, 255)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_jpl_file(s.c.tls, p_fname)
+	s.c.state.SetJplFile(p_fname)
 	f.copyBack()
 	return
 }
 
 // GetPlanetName calls swe_get_planet_name. Buffer lengths: spname >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetPlanetName(ipl int32, spname []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_spname := f.bytes("spname", spname, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_get_planet_name(s.c.tls, ipl, p_spname))
+	result = s.c.state.GetPlanetName(ipl, p_spname)
 	f.copyBack()
 	return
 }
 
 // SetTopo calls swe_set_topo.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetTopo(geolon float64, geolat float64, geoalt float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(geolon) {
 		err = invalidNumber("geolon")
 		return
@@ -794,20 +758,19 @@ func (s *Session) SetTopo(geolon float64, geolat float64, geoalt float64) (err e
 		err = f.err
 		return
 	}
-	raw.Xswe_set_topo(s.c.tls, geolon, geolat, geoalt)
+	s.c.state.SetTopo(geolon, geolat, geoalt)
 	f.copyBack()
 	return
 }
 
 // SetSidMode calls swe_set_sid_mode.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetSidMode(sid_mode int32, t0 float64, ayan_t0 float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(t0) {
 		err = invalidNumber("t0")
 		return
@@ -820,20 +783,19 @@ func (s *Session) SetSidMode(sid_mode int32, t0 float64, ayan_t0 float64) (err e
 		err = f.err
 		return
 	}
-	raw.Xswe_set_sid_mode(s.c.tls, sid_mode, t0, ayan_t0)
+	s.c.state.SetSidMode(sid_mode, t0, ayan_t0)
 	f.copyBack()
 	return
 }
 
 // GetAyanamsaEx calls swe_get_ayanamsa_ex. Buffer lengths: daya >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAyanamsaEx(tjd_et float64, iflag int32, daya []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -844,20 +806,19 @@ func (s *Session) GetAyanamsaEx(tjd_et float64, iflag int32, daya []float64, ser
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_ayanamsa_ex(s.c.tls, tjd_et, iflag, p_daya, p_serr)
+	result = s.c.state.GetAyanamsaEx(tjd_et, iflag, p_daya, p_serr)
 	f.copyBack()
 	return
 }
 
 // GetAyanamsaExUt calls swe_get_ayanamsa_ex_ut. Buffer lengths: daya >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAyanamsaExUt(tjd_ut float64, iflag int32, daya []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -868,20 +829,19 @@ func (s *Session) GetAyanamsaExUt(tjd_ut float64, iflag int32, daya []float64, s
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_ayanamsa_ex_ut(s.c.tls, tjd_ut, iflag, p_daya, p_serr)
+	result = s.c.state.GetAyanamsaExUt(tjd_ut, iflag, p_daya, p_serr)
 	f.copyBack()
 	return
 }
 
 // GetAyanamsa calls swe_get_ayanamsa.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAyanamsa(tjd_et float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -890,20 +850,19 @@ func (s *Session) GetAyanamsa(tjd_et float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_ayanamsa(s.c.tls, tjd_et)
+	result = s.c.state.GetAyanamsa(tjd_et)
 	f.copyBack()
 	return
 }
 
 // GetAyanamsaUt calls swe_get_ayanamsa_ut.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAyanamsaUt(tjd_ut float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -912,38 +871,36 @@ func (s *Session) GetAyanamsaUt(tjd_ut float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_ayanamsa_ut(s.c.tls, tjd_ut)
+	result = s.c.state.GetAyanamsaUt(tjd_ut)
 	f.copyBack()
 	return
 }
 
 // GetAyanamsaName calls swe_get_ayanamsa_name.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetAyanamsaName(isidmode int32) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_get_ayanamsa_name(s.c.tls, isidmode))
+	result = s.c.state.GetAyanamsaName(isidmode)
 	f.copyBack()
 	return
 }
 
 // GetCurrentFileData calls swe_get_current_file_data. Buffer lengths: tfstart >= 1, tfend >= 1, denum >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetCurrentFileData(ifno int32, tfstart []float64, tfend []float64, denum []int32) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_tfstart := f.doubles("tfstart", tfstart, 1)
 	p_tfend := f.doubles("tfend", tfend, 1)
 	p_denum := f.ints("denum", denum, 1)
@@ -951,20 +908,19 @@ func (s *Session) GetCurrentFileData(ifno int32, tfstart []float64, tfend []floa
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_get_current_file_data(s.c.tls, ifno, p_tfstart, p_tfend, p_denum))
+	result = s.c.state.GetCurrentFileData(ifno, p_tfstart, p_tfend, p_denum)
 	f.copyBack()
 	return
 }
 
 // DateConversion calls swe_date_conversion. Buffer lengths: tjd >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) DateConversion(y int32, m int32, d int32, utime float64, c int8, tjd []float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(utime) {
 		err = invalidNumber("utime")
 		return
@@ -974,20 +930,19 @@ func (s *Session) DateConversion(y int32, m int32, d int32, utime float64, c int
 		err = f.err
 		return
 	}
-	result = raw.Xswe_date_conversion(s.c.tls, y, m, d, utime, abiChar(c), p_tjd)
+	result = s.c.state.DateConversion(y, m, d, utime, c, p_tjd)
 	f.copyBack()
 	return
 }
 
 // Julday calls swe_julday.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Julday(year int32, month int32, day int32, hour float64, gregflag int32) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(hour) {
 		err = invalidNumber("hour")
 		return
@@ -996,20 +951,19 @@ func (s *Session) Julday(year int32, month int32, day int32, hour float64, gregf
 		err = f.err
 		return
 	}
-	result = raw.Xswe_julday(s.c.tls, year, month, day, hour, gregflag)
+	result = s.c.state.Julday(year, month, day, hour, gregflag)
 	f.copyBack()
 	return
 }
 
 // Revjul calls swe_revjul. Buffer lengths: jyear >= 1, jmon >= 1, jday >= 1, jut >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Revjul(jd float64, gregflag int32, jyear []int32, jmon []int32, jday []int32, jut []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(jd) {
 		err = invalidNumber("jd")
 		return
@@ -1022,20 +976,19 @@ func (s *Session) Revjul(jd float64, gregflag int32, jyear []int32, jmon []int32
 		err = f.err
 		return
 	}
-	raw.Xswe_revjul(s.c.tls, jd, gregflag, p_jyear, p_jmon, p_jday, p_jut)
+	s.c.state.Revjul(jd, gregflag, p_jyear, p_jmon, p_jday, p_jut)
 	f.copyBack()
 	return
 }
 
 // UtcToJd calls swe_utc_to_jd. Buffer lengths: dret >= 2, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) UtcToJd(iyear int32, imonth int32, iday int32, ihour int32, imin int32, dsec float64, gregflag int32, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(dsec) {
 		err = invalidNumber("dsec")
 		return
@@ -1046,20 +999,19 @@ func (s *Session) UtcToJd(iyear int32, imonth int32, iday int32, ihour int32, im
 		err = f.err
 		return
 	}
-	result = raw.Xswe_utc_to_jd(s.c.tls, iyear, imonth, iday, ihour, imin, dsec, gregflag, p_dret, p_serr)
+	result = s.c.state.UtcToJd(iyear, imonth, iday, ihour, imin, dsec, gregflag, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // JdetToUtc calls swe_jdet_to_utc. Buffer lengths: iyear >= 1, imonth >= 1, iday >= 1, ihour >= 1, imin >= 1, dsec >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) JdetToUtc(tjd_et float64, gregflag int32, iyear []int32, imonth []int32, iday []int32, ihour []int32, imin []int32, dsec []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -1074,20 +1026,19 @@ func (s *Session) JdetToUtc(tjd_et float64, gregflag int32, iyear []int32, imont
 		err = f.err
 		return
 	}
-	raw.Xswe_jdet_to_utc(s.c.tls, tjd_et, gregflag, p_iyear, p_imonth, p_iday, p_ihour, p_imin, p_dsec)
+	s.c.state.JdetToUtc(tjd_et, gregflag, p_iyear, p_imonth, p_iday, p_ihour, p_imin, p_dsec)
 	f.copyBack()
 	return
 }
 
 // Jdut1ToUtc calls swe_jdut1_to_utc. Buffer lengths: iyear >= 1, imonth >= 1, iday >= 1, ihour >= 1, imin >= 1, dsec >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Jdut1ToUtc(tjd_ut float64, gregflag int32, iyear []int32, imonth []int32, iday []int32, ihour []int32, imin []int32, dsec []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1102,20 +1053,19 @@ func (s *Session) Jdut1ToUtc(tjd_ut float64, gregflag int32, iyear []int32, imon
 		err = f.err
 		return
 	}
-	raw.Xswe_jdut1_to_utc(s.c.tls, tjd_ut, gregflag, p_iyear, p_imonth, p_iday, p_ihour, p_imin, p_dsec)
+	s.c.state.Jdut1ToUtc(tjd_ut, gregflag, p_iyear, p_imonth, p_iday, p_ihour, p_imin, p_dsec)
 	f.copyBack()
 	return
 }
 
 // UtcTimeZone calls swe_utc_time_zone. Buffer lengths: iyear_out >= 1, imonth_out >= 1, iday_out >= 1, ihour_out >= 1, imin_out >= 1, dsec_out >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) UtcTimeZone(iyear int32, imonth int32, iday int32, ihour int32, imin int32, dsec float64, d_timezone float64, iyear_out []int32, imonth_out []int32, iday_out []int32, ihour_out []int32, imin_out []int32, dsec_out []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(dsec) {
 		err = invalidNumber("dsec")
 		return
@@ -1134,20 +1084,19 @@ func (s *Session) UtcTimeZone(iyear int32, imonth int32, iday int32, ihour int32
 		err = f.err
 		return
 	}
-	raw.Xswe_utc_time_zone(s.c.tls, iyear, imonth, iday, ihour, imin, dsec, d_timezone, p_iyear_out, p_imonth_out, p_iday_out, p_ihour_out, p_imin_out, p_dsec_out)
+	s.c.state.UtcTimeZone(iyear, imonth, iday, ihour, imin, dsec, d_timezone, p_iyear_out, p_imonth_out, p_iday_out, p_ihour_out, p_imin_out, p_dsec_out)
 	f.copyBack()
 	return
 }
 
 // Houses calls swe_houses. Buffer lengths: cusps >= 37, ascmc >= 10.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Houses(tjd_ut float64, geolat float64, geolon float64, hsys int32, cusps []float64, ascmc []float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1166,20 +1115,19 @@ func (s *Session) Houses(tjd_ut float64, geolat float64, geolon float64, hsys in
 		err = f.err
 		return
 	}
-	result = raw.Xswe_houses(s.c.tls, tjd_ut, geolat, geolon, hsys, p_cusps, p_ascmc)
+	result = s.c.state.Houses(tjd_ut, geolat, geolon, hsys, p_cusps, p_ascmc)
 	f.copyBack()
 	return
 }
 
 // HousesEx calls swe_houses_ex. Buffer lengths: cusps >= 37, ascmc >= 10.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HousesEx(tjd_ut float64, iflag int32, geolat float64, geolon float64, hsys int32, cusps []float64, ascmc []float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1198,20 +1146,19 @@ func (s *Session) HousesEx(tjd_ut float64, iflag int32, geolat float64, geolon f
 		err = f.err
 		return
 	}
-	result = raw.Xswe_houses_ex(s.c.tls, tjd_ut, iflag, geolat, geolon, hsys, p_cusps, p_ascmc)
+	result = s.c.state.HousesEx(tjd_ut, iflag, geolat, geolon, hsys, p_cusps, p_ascmc)
 	f.copyBack()
 	return
 }
 
 // HousesEx2 calls swe_houses_ex2. Buffer lengths: cusps >= 37, ascmc >= 10, cusp_speed >= 37, ascmc_speed >= 10, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HousesEx2(tjd_ut float64, iflag int32, geolat float64, geolon float64, hsys int32, cusps []float64, ascmc []float64, cusp_speed []float64, ascmc_speed []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1233,20 +1180,19 @@ func (s *Session) HousesEx2(tjd_ut float64, iflag int32, geolat float64, geolon 
 		err = f.err
 		return
 	}
-	result = raw.Xswe_houses_ex2(s.c.tls, tjd_ut, iflag, geolat, geolon, hsys, p_cusps, p_ascmc, p_cusp_speed, p_ascmc_speed, p_serr)
+	result = s.c.state.HousesEx2(tjd_ut, iflag, geolat, geolon, hsys, p_cusps, p_ascmc, p_cusp_speed, p_ascmc_speed, p_serr)
 	f.copyBack()
 	return
 }
 
 // HousesArmc calls swe_houses_armc. Buffer lengths: cusps >= 37, ascmc >= 10.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HousesArmc(armc float64, geolat float64, eps float64, hsys int32, cusps []float64, ascmc []float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(armc) {
 		err = invalidNumber("armc")
 		return
@@ -1265,20 +1211,19 @@ func (s *Session) HousesArmc(armc float64, geolat float64, eps float64, hsys int
 		err = f.err
 		return
 	}
-	result = raw.Xswe_houses_armc(s.c.tls, armc, geolat, eps, hsys, p_cusps, p_ascmc)
+	result = s.c.state.HousesArmc(armc, geolat, eps, hsys, p_cusps, p_ascmc)
 	f.copyBack()
 	return
 }
 
 // HousesArmcEx2 calls swe_houses_armc_ex2. Buffer lengths: cusps >= 37, ascmc >= 10, cusp_speed >= 37, ascmc_speed >= 10, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HousesArmcEx2(armc float64, geolat float64, eps float64, hsys int32, cusps []float64, ascmc []float64, cusp_speed []float64, ascmc_speed []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(armc) {
 		err = invalidNumber("armc")
 		return
@@ -1300,20 +1245,19 @@ func (s *Session) HousesArmcEx2(armc float64, geolat float64, eps float64, hsys 
 		err = f.err
 		return
 	}
-	result = raw.Xswe_houses_armc_ex2(s.c.tls, armc, geolat, eps, hsys, p_cusps, p_ascmc, p_cusp_speed, p_ascmc_speed, p_serr)
+	result = s.c.state.HousesArmcEx2(armc, geolat, eps, hsys, p_cusps, p_ascmc, p_cusp_speed, p_ascmc_speed, p_serr)
 	f.copyBack()
 	return
 }
 
 // HousePos calls swe_house_pos. Buffer lengths: xpin >= 2, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HousePos(armc float64, geolat float64, eps float64, hsys int32, xpin []float64, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(armc) {
 		err = invalidNumber("armc")
 		return
@@ -1332,38 +1276,36 @@ func (s *Session) HousePos(armc float64, geolat float64, eps float64, hsys int32
 		err = f.err
 		return
 	}
-	result = raw.Xswe_house_pos(s.c.tls, armc, geolat, eps, hsys, p_xpin, p_serr)
+	result = s.c.state.HousePos(armc, geolat, eps, hsys, p_xpin, p_serr)
 	f.copyBack()
 	return
 }
 
 // HouseName calls swe_house_name.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) HouseName(hsys int32) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_house_name(s.c.tls, hsys))
+	result = s.c.state.HouseName(hsys)
 	f.copyBack()
 	return
 }
 
 // GauquelinSector calls swe_gauquelin_sector. Buffer lengths: starname >= 256, geopos >= 3, dgsect >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GauquelinSector(t_ut float64, ipl int32, starname []byte, iflag int32, imeth int32, geopos []float64, atpress float64, attemp float64, dgsect []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(t_ut) {
 		err = invalidNumber("t_ut")
 		return
@@ -1384,20 +1326,19 @@ func (s *Session) GauquelinSector(t_ut float64, ipl int32, starname []byte, ifla
 		err = f.err
 		return
 	}
-	result = raw.Xswe_gauquelin_sector(s.c.tls, t_ut, ipl, p_starname, iflag, imeth, p_geopos, atpress, attemp, p_dgsect, p_serr)
+	result = s.c.state.GauquelinSector(t_ut, ipl, p_starname, iflag, imeth, p_geopos, atpress, attemp, p_dgsect, p_serr)
 	f.copyBack()
 	return
 }
 
 // SolEclipseWhere calls swe_sol_eclipse_where. Buffer lengths: geopos >= 10, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SolEclipseWhere(tjd float64, ifl int32, geopos []float64, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -1409,20 +1350,19 @@ func (s *Session) SolEclipseWhere(tjd float64, ifl int32, geopos []float64, attr
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sol_eclipse_where(s.c.tls, tjd, ifl, p_geopos, p_attr, p_serr)
+	result = s.c.state.SolEclipseWhere(tjd, ifl, p_geopos, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunOccultWhere calls swe_lun_occult_where. Buffer lengths: starname >= 256, geopos >= 10, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunOccultWhere(tjd float64, ipl int32, starname []byte, ifl int32, geopos []float64, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -1435,20 +1375,19 @@ func (s *Session) LunOccultWhere(tjd float64, ipl int32, starname []byte, ifl in
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_occult_where(s.c.tls, tjd, ipl, p_starname, ifl, p_geopos, p_attr, p_serr)
+	result = s.c.state.LunOccultWhere(tjd, ipl, p_starname, ifl, p_geopos, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // SolEclipseHow calls swe_sol_eclipse_how. Buffer lengths: geopos >= 3, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SolEclipseHow(tjd float64, ifl int32, geopos []float64, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -1460,20 +1399,19 @@ func (s *Session) SolEclipseHow(tjd float64, ifl int32, geopos []float64, attr [
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sol_eclipse_how(s.c.tls, tjd, ifl, p_geopos, p_attr, p_serr)
+	result = s.c.state.SolEclipseHow(tjd, ifl, p_geopos, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // SolEclipseWhenLoc calls swe_sol_eclipse_when_loc. Buffer lengths: geopos >= 3, tret >= 10, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SolEclipseWhenLoc(tjd_start float64, ifl int32, geopos []float64, tret []float64, attr []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1486,20 +1424,19 @@ func (s *Session) SolEclipseWhenLoc(tjd_start float64, ifl int32, geopos []float
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sol_eclipse_when_loc(s.c.tls, tjd_start, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
+	result = s.c.state.SolEclipseWhenLoc(tjd_start, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunOccultWhenLoc calls swe_lun_occult_when_loc. Buffer lengths: starname >= 256, geopos >= 3, tret >= 10, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunOccultWhenLoc(tjd_start float64, ipl int32, starname []byte, ifl int32, geopos []float64, tret []float64, attr []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1513,20 +1450,19 @@ func (s *Session) LunOccultWhenLoc(tjd_start float64, ipl int32, starname []byte
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_occult_when_loc(s.c.tls, tjd_start, ipl, p_starname, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
+	result = s.c.state.LunOccultWhenLoc(tjd_start, ipl, p_starname, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // SolEclipseWhenGlob calls swe_sol_eclipse_when_glob. Buffer lengths: tret >= 10, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SolEclipseWhenGlob(tjd_start float64, ifl int32, ifltype int32, tret []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1537,20 +1473,19 @@ func (s *Session) SolEclipseWhenGlob(tjd_start float64, ifl int32, ifltype int32
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sol_eclipse_when_glob(s.c.tls, tjd_start, ifl, ifltype, p_tret, backward, p_serr)
+	result = s.c.state.SolEclipseWhenGlob(tjd_start, ifl, ifltype, p_tret, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunOccultWhenGlob calls swe_lun_occult_when_glob. Buffer lengths: starname >= 256, tret >= 10, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunOccultWhenGlob(tjd_start float64, ipl int32, starname []byte, ifl int32, ifltype int32, tret []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1562,20 +1497,19 @@ func (s *Session) LunOccultWhenGlob(tjd_start float64, ipl int32, starname []byt
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_occult_when_glob(s.c.tls, tjd_start, ipl, p_starname, ifl, ifltype, p_tret, backward, p_serr)
+	result = s.c.state.LunOccultWhenGlob(tjd_start, ipl, p_starname, ifl, ifltype, p_tret, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunEclipseHow calls swe_lun_eclipse_how. Buffer lengths: geopos >= 3, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunEclipseHow(tjd_ut float64, ifl int32, geopos []float64, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1587,20 +1521,19 @@ func (s *Session) LunEclipseHow(tjd_ut float64, ifl int32, geopos []float64, att
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_eclipse_how(s.c.tls, tjd_ut, ifl, p_geopos, p_attr, p_serr)
+	result = s.c.state.LunEclipseHow(tjd_ut, ifl, p_geopos, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunEclipseWhen calls swe_lun_eclipse_when. Buffer lengths: tret >= 10, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunEclipseWhen(tjd_start float64, ifl int32, ifltype int32, tret []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1611,20 +1544,19 @@ func (s *Session) LunEclipseWhen(tjd_start float64, ifl int32, ifltype int32, tr
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_eclipse_when(s.c.tls, tjd_start, ifl, ifltype, p_tret, backward, p_serr)
+	result = s.c.state.LunEclipseWhen(tjd_start, ifl, ifltype, p_tret, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // LunEclipseWhenLoc calls swe_lun_eclipse_when_loc. Buffer lengths: geopos >= 3, tret >= 10, attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LunEclipseWhenLoc(tjd_start float64, ifl int32, geopos []float64, tret []float64, attr []float64, backward int32, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_start) {
 		err = invalidNumber("tjd_start")
 		return
@@ -1637,20 +1569,19 @@ func (s *Session) LunEclipseWhenLoc(tjd_start float64, ifl int32, geopos []float
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lun_eclipse_when_loc(s.c.tls, tjd_start, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
+	result = s.c.state.LunEclipseWhenLoc(tjd_start, ifl, p_geopos, p_tret, p_attr, backward, p_serr)
 	f.copyBack()
 	return
 }
 
 // Pheno calls swe_pheno. Buffer lengths: attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Pheno(tjd float64, ipl int32, iflag int32, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -1661,20 +1592,19 @@ func (s *Session) Pheno(tjd float64, ipl int32, iflag int32, attr []float64, ser
 		err = f.err
 		return
 	}
-	result = raw.Xswe_pheno(s.c.tls, tjd, ipl, iflag, p_attr, p_serr)
+	result = s.c.state.Pheno(tjd, ipl, iflag, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // PhenoUt calls swe_pheno_ut. Buffer lengths: attr >= 20, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) PhenoUt(tjd_ut float64, ipl int32, iflag int32, attr []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1685,20 +1615,19 @@ func (s *Session) PhenoUt(tjd_ut float64, ipl int32, iflag int32, attr []float64
 		err = f.err
 		return
 	}
-	result = raw.Xswe_pheno_ut(s.c.tls, tjd_ut, ipl, iflag, p_attr, p_serr)
+	result = s.c.state.PhenoUt(tjd_ut, ipl, iflag, p_attr, p_serr)
 	f.copyBack()
 	return
 }
 
 // Refrac calls swe_refrac.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Refrac(inalt float64, atpress float64, attemp float64, calc_flag int32) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(inalt) {
 		err = invalidNumber("inalt")
 		return
@@ -1715,20 +1644,19 @@ func (s *Session) Refrac(inalt float64, atpress float64, attemp float64, calc_fl
 		err = f.err
 		return
 	}
-	result = raw.Xswe_refrac(s.c.tls, inalt, atpress, attemp, calc_flag)
+	result = s.c.state.Refrac(inalt, atpress, attemp, calc_flag)
 	f.copyBack()
 	return
 }
 
 // RefracExtended calls swe_refrac_extended. Buffer lengths: dret >= 4.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) RefracExtended(inalt float64, geoalt float64, atpress float64, attemp float64, lapse_rate float64, calc_flag int32, dret []float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(inalt) {
 		err = invalidNumber("inalt")
 		return
@@ -1754,20 +1682,19 @@ func (s *Session) RefracExtended(inalt float64, geoalt float64, atpress float64,
 		err = f.err
 		return
 	}
-	result = raw.Xswe_refrac_extended(s.c.tls, inalt, geoalt, atpress, attemp, lapse_rate, calc_flag, p_dret)
+	result = s.c.state.RefracExtended(inalt, geoalt, atpress, attemp, lapse_rate, calc_flag, p_dret)
 	f.copyBack()
 	return
 }
 
 // SetLapseRate calls swe_set_lapse_rate.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetLapseRate(lapse_rate float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(lapse_rate) {
 		err = invalidNumber("lapse_rate")
 		return
@@ -1776,20 +1703,19 @@ func (s *Session) SetLapseRate(lapse_rate float64) (err error) {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_lapse_rate(s.c.tls, lapse_rate)
+	s.c.state.SetLapseRate(lapse_rate)
 	f.copyBack()
 	return
 }
 
 // Azalt calls swe_azalt. Buffer lengths: geopos >= 3, xin >= 3, xaz >= 3.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Azalt(tjd_ut float64, calc_flag int32, geopos []float64, atpress float64, attemp float64, xin []float64, xaz []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1809,20 +1735,19 @@ func (s *Session) Azalt(tjd_ut float64, calc_flag int32, geopos []float64, atpre
 		err = f.err
 		return
 	}
-	raw.Xswe_azalt(s.c.tls, tjd_ut, calc_flag, p_geopos, atpress, attemp, p_xin, p_xaz)
+	s.c.state.Azalt(tjd_ut, calc_flag, p_geopos, atpress, attemp, p_xin, p_xaz)
 	f.copyBack()
 	return
 }
 
 // AzaltRev calls swe_azalt_rev. Buffer lengths: geopos >= 3, xin >= 3, xout >= 3.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) AzaltRev(tjd_ut float64, calc_flag int32, geopos []float64, xin []float64, xout []float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1834,20 +1759,19 @@ func (s *Session) AzaltRev(tjd_ut float64, calc_flag int32, geopos []float64, xi
 		err = f.err
 		return
 	}
-	raw.Xswe_azalt_rev(s.c.tls, tjd_ut, calc_flag, p_geopos, p_xin, p_xout)
+	s.c.state.AzaltRev(tjd_ut, calc_flag, p_geopos, p_xin, p_xout)
 	f.copyBack()
 	return
 }
 
 // RiseTransTrueHor calls swe_rise_trans_true_hor. Buffer lengths: starname >= 256, geopos >= 3, tret >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) RiseTransTrueHor(tjd_ut float64, ipl int32, starname []byte, epheflag int32, rsmi int32, geopos []float64, atpress float64, attemp float64, horhgt float64, tret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1872,20 +1796,19 @@ func (s *Session) RiseTransTrueHor(tjd_ut float64, ipl int32, starname []byte, e
 		err = f.err
 		return
 	}
-	result = raw.Xswe_rise_trans_true_hor(s.c.tls, tjd_ut, ipl, p_starname, epheflag, rsmi, p_geopos, atpress, attemp, horhgt, p_tret, p_serr)
+	result = s.c.state.RiseTransTrueHor(tjd_ut, ipl, p_starname, epheflag, rsmi, p_geopos, atpress, attemp, horhgt, p_tret, p_serr)
 	f.copyBack()
 	return
 }
 
 // RiseTrans calls swe_rise_trans. Buffer lengths: starname >= 256, geopos >= 3, tret >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) RiseTrans(tjd_ut float64, ipl int32, starname []byte, epheflag int32, rsmi int32, geopos []float64, atpress float64, attemp float64, tret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1906,20 +1829,19 @@ func (s *Session) RiseTrans(tjd_ut float64, ipl int32, starname []byte, epheflag
 		err = f.err
 		return
 	}
-	result = raw.Xswe_rise_trans(s.c.tls, tjd_ut, ipl, p_starname, epheflag, rsmi, p_geopos, atpress, attemp, p_tret, p_serr)
+	result = s.c.state.RiseTrans(tjd_ut, ipl, p_starname, epheflag, rsmi, p_geopos, atpress, attemp, p_tret, p_serr)
 	f.copyBack()
 	return
 }
 
 // NodAps calls swe_nod_aps. Buffer lengths: xnasc >= 6, xndsc >= 6, xperi >= 6, xaphe >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) NodAps(tjd_et float64, ipl int32, iflag int32, method int32, xnasc []float64, xndsc []float64, xperi []float64, xaphe []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -1933,20 +1855,19 @@ func (s *Session) NodAps(tjd_et float64, ipl int32, iflag int32, method int32, x
 		err = f.err
 		return
 	}
-	result = raw.Xswe_nod_aps(s.c.tls, tjd_et, ipl, iflag, method, p_xnasc, p_xndsc, p_xperi, p_xaphe, p_serr)
+	result = s.c.state.NodAps(tjd_et, ipl, iflag, method, p_xnasc, p_xndsc, p_xperi, p_xaphe, p_serr)
 	f.copyBack()
 	return
 }
 
 // NodApsUt calls swe_nod_aps_ut. Buffer lengths: xnasc >= 6, xndsc >= 6, xperi >= 6, xaphe >= 6, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) NodApsUt(tjd_ut float64, ipl int32, iflag int32, method int32, xnasc []float64, xndsc []float64, xperi []float64, xaphe []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -1960,20 +1881,19 @@ func (s *Session) NodApsUt(tjd_ut float64, ipl int32, iflag int32, method int32,
 		err = f.err
 		return
 	}
-	result = raw.Xswe_nod_aps_ut(s.c.tls, tjd_ut, ipl, iflag, method, p_xnasc, p_xndsc, p_xperi, p_xaphe, p_serr)
+	result = s.c.state.NodApsUt(tjd_ut, ipl, iflag, method, p_xnasc, p_xndsc, p_xperi, p_xaphe, p_serr)
 	f.copyBack()
 	return
 }
 
 // GetOrbitalElements calls swe_get_orbital_elements. Buffer lengths: dret >= 50, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetOrbitalElements(tjd_et float64, ipl int32, iflag int32, dret []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -1984,20 +1904,19 @@ func (s *Session) GetOrbitalElements(tjd_et float64, ipl int32, iflag int32, dre
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_orbital_elements(s.c.tls, tjd_et, ipl, iflag, p_dret, p_serr)
+	result = s.c.state.GetOrbitalElements(tjd_et, ipl, iflag, p_dret, p_serr)
 	f.copyBack()
 	return
 }
 
 // OrbitMaxMinTrueDistance calls swe_orbit_max_min_true_distance. Buffer lengths: dmax >= 1, dmin >= 1, dtrue >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) OrbitMaxMinTrueDistance(tjd_et float64, ipl int32, iflag int32, dmax []float64, dmin []float64, dtrue []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_et) {
 		err = invalidNumber("tjd_et")
 		return
@@ -2010,20 +1929,19 @@ func (s *Session) OrbitMaxMinTrueDistance(tjd_et float64, ipl int32, iflag int32
 		err = f.err
 		return
 	}
-	result = raw.Xswe_orbit_max_min_true_distance(s.c.tls, tjd_et, ipl, iflag, p_dmax, p_dmin, p_dtrue, p_serr)
+	result = s.c.state.OrbitMaxMinTrueDistance(tjd_et, ipl, iflag, p_dmax, p_dmin, p_dtrue, p_serr)
 	f.copyBack()
 	return
 }
 
 // Deltat calls swe_deltat.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Deltat(tjd float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -2032,20 +1950,19 @@ func (s *Session) Deltat(tjd float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_deltat(s.c.tls, tjd)
+	result = s.c.state.Deltat(tjd)
 	f.copyBack()
 	return
 }
 
 // DeltatEx calls swe_deltat_ex. Buffer lengths: serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) DeltatEx(tjd float64, iflag int32, serr []byte) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -2055,20 +1972,19 @@ func (s *Session) DeltatEx(tjd float64, iflag int32, serr []byte) (result float6
 		err = f.err
 		return
 	}
-	result = raw.Xswe_deltat_ex(s.c.tls, tjd, iflag, p_serr)
+	result = s.c.state.DeltatEx(tjd, iflag, p_serr)
 	f.copyBack()
 	return
 }
 
 // TimeEqu calls swe_time_equ. Buffer lengths: te >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) TimeEqu(tjd float64, te []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd) {
 		err = invalidNumber("tjd")
 		return
@@ -2079,20 +1995,19 @@ func (s *Session) TimeEqu(tjd float64, te []float64, serr []byte) (result int32,
 		err = f.err
 		return
 	}
-	result = raw.Xswe_time_equ(s.c.tls, tjd, p_te, p_serr)
+	result = s.c.state.TimeEqu(tjd, p_te, p_serr)
 	f.copyBack()
 	return
 }
 
 // LmtToLat calls swe_lmt_to_lat. Buffer lengths: tjd_lat >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LmtToLat(tjd_lmt float64, geolon float64, tjd_lat []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_lmt) {
 		err = invalidNumber("tjd_lmt")
 		return
@@ -2107,20 +2022,19 @@ func (s *Session) LmtToLat(tjd_lmt float64, geolon float64, tjd_lat []float64, s
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lmt_to_lat(s.c.tls, tjd_lmt, geolon, p_tjd_lat, p_serr)
+	result = s.c.state.LmtToLat(tjd_lmt, geolon, p_tjd_lat, p_serr)
 	f.copyBack()
 	return
 }
 
 // LatToLmt calls swe_lat_to_lmt. Buffer lengths: tjd_lmt >= 1, serr >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) LatToLmt(tjd_lat float64, geolon float64, tjd_lmt []float64, serr []byte) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_lat) {
 		err = invalidNumber("tjd_lat")
 		return
@@ -2135,20 +2049,19 @@ func (s *Session) LatToLmt(tjd_lat float64, geolon float64, tjd_lmt []float64, s
 		err = f.err
 		return
 	}
-	result = raw.Xswe_lat_to_lmt(s.c.tls, tjd_lat, geolon, p_tjd_lmt, p_serr)
+	result = s.c.state.LatToLmt(tjd_lat, geolon, p_tjd_lmt, p_serr)
 	f.copyBack()
 	return
 }
 
 // Sidtime0 calls swe_sidtime0.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Sidtime0(tjd_ut float64, eps float64, nut float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -2165,20 +2078,19 @@ func (s *Session) Sidtime0(tjd_ut float64, eps float64, nut float64) (result flo
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sidtime0(s.c.tls, tjd_ut, eps, nut)
+	result = s.c.state.Sidtime0(tjd_ut, eps, nut)
 	f.copyBack()
 	return
 }
 
 // Sidtime calls swe_sidtime.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Sidtime(tjd_ut float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(tjd_ut) {
 		err = invalidNumber("tjd_ut")
 		return
@@ -2187,38 +2099,36 @@ func (s *Session) Sidtime(tjd_ut float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_sidtime(s.c.tls, tjd_ut)
+	result = s.c.state.Sidtime(tjd_ut)
 	f.copyBack()
 	return
 }
 
 // SetInterpolateNut calls swe_set_interpolate_nut.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetInterpolateNut(do_interpolate int32) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_interpolate_nut(s.c.tls, do_interpolate)
+	s.c.state.SetInterpolateNut(do_interpolate)
 	f.copyBack()
 	return
 }
 
 // Cotrans calls swe_cotrans. Buffer lengths: xpo >= 3, xpn >= 3.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Cotrans(xpo []float64, xpn []float64, eps float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_xpo := f.doubles("xpo", xpo, 3)
 	p_xpn := f.doubles("xpn", xpn, 3)
 	if !finite(eps) {
@@ -2229,20 +2139,19 @@ func (s *Session) Cotrans(xpo []float64, xpn []float64, eps float64) (err error)
 		err = f.err
 		return
 	}
-	raw.Xswe_cotrans(s.c.tls, p_xpo, p_xpn, eps)
+	s.c.state.Cotrans(p_xpo, p_xpn, eps)
 	f.copyBack()
 	return
 }
 
 // CotransSp calls swe_cotrans_sp. Buffer lengths: xpo >= 6, xpn >= 6.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) CotransSp(xpo []float64, xpn []float64, eps float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_xpo := f.doubles("xpo", xpo, 6)
 	p_xpn := f.doubles("xpn", xpn, 6)
 	if !finite(eps) {
@@ -2253,38 +2162,36 @@ func (s *Session) CotransSp(xpo []float64, xpn []float64, eps float64) (err erro
 		err = f.err
 		return
 	}
-	raw.Xswe_cotrans_sp(s.c.tls, p_xpo, p_xpn, eps)
+	s.c.state.CotransSp(p_xpo, p_xpn, eps)
 	f.copyBack()
 	return
 }
 
 // GetTidAcc calls swe_get_tid_acc.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) GetTidAcc() (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_get_tid_acc(s.c.tls)
+	result = s.c.state.GetTidAcc()
 	f.copyBack()
 	return
 }
 
 // SetTidAcc calls swe_set_tid_acc.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetTidAcc(t_acc float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(t_acc) {
 		err = invalidNumber("t_acc")
 		return
@@ -2293,20 +2200,19 @@ func (s *Session) SetTidAcc(t_acc float64) (err error) {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_tid_acc(s.c.tls, t_acc)
+	s.c.state.SetTidAcc(t_acc)
 	f.copyBack()
 	return
 }
 
 // SetDeltaTUserdef calls swe_set_delta_t_userdef.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SetDeltaTUserdef(dt float64) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(dt) {
 		err = invalidNumber("dt")
 		return
@@ -2315,20 +2221,19 @@ func (s *Session) SetDeltaTUserdef(dt float64) (err error) {
 		err = f.err
 		return
 	}
-	raw.Xswe_set_delta_t_userdef(s.c.tls, dt)
+	s.c.state.SetDeltaTUserdef(dt)
 	f.copyBack()
 	return
 }
 
 // Degnorm calls swe_degnorm.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Degnorm(x float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x) {
 		err = invalidNumber("x")
 		return
@@ -2337,20 +2242,19 @@ func (s *Session) Degnorm(x float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_degnorm(s.c.tls, x)
+	result = s.c.state.Degnorm(x)
 	f.copyBack()
 	return
 }
 
 // Radnorm calls swe_radnorm.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Radnorm(x float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x) {
 		err = invalidNumber("x")
 		return
@@ -2359,20 +2263,19 @@ func (s *Session) Radnorm(x float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_radnorm(s.c.tls, x)
+	result = s.c.state.Radnorm(x)
 	f.copyBack()
 	return
 }
 
 // RadMidp calls swe_rad_midp.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) RadMidp(x1 float64, x0 float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x1) {
 		err = invalidNumber("x1")
 		return
@@ -2385,20 +2288,19 @@ func (s *Session) RadMidp(x1 float64, x0 float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_rad_midp(s.c.tls, x1, x0)
+	result = s.c.state.RadMidp(x1, x0)
 	f.copyBack()
 	return
 }
 
 // DegMidp calls swe_deg_midp.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) DegMidp(x1 float64, x0 float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x1) {
 		err = invalidNumber("x1")
 		return
@@ -2411,20 +2313,19 @@ func (s *Session) DegMidp(x1 float64, x0 float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_deg_midp(s.c.tls, x1, x0)
+	result = s.c.state.DegMidp(x1, x0)
 	f.copyBack()
 	return
 }
 
 // SplitDeg calls swe_split_deg. Buffer lengths: ideg >= 1, imin >= 1, isec >= 1, dsecfr >= 1, isgn >= 1.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) SplitDeg(ddeg float64, roundflag int32, ideg []int32, imin []int32, isec []int32, dsecfr []float64, isgn []int32) (err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(ddeg) {
 		err = invalidNumber("ddeg")
 		return
@@ -2438,56 +2339,53 @@ func (s *Session) SplitDeg(ddeg float64, roundflag int32, ideg []int32, imin []i
 		err = f.err
 		return
 	}
-	raw.Xswe_split_deg(s.c.tls, ddeg, roundflag, p_ideg, p_imin, p_isec, p_dsecfr, p_isgn)
+	s.c.state.SplitDeg(ddeg, roundflag, p_ideg, p_imin, p_isec, p_dsecfr, p_isgn)
 	f.copyBack()
 	return
 }
 
 // Csnorm calls swe_csnorm.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Csnorm(p int32) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_csnorm(s.c.tls, p)
+	result = s.c.state.Csnorm(p)
 	f.copyBack()
 	return
 }
 
 // Difcsn calls swe_difcsn.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Difcsn(p1 int32, p2 int32) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_difcsn(s.c.tls, p1, p2)
+	result = s.c.state.Difcsn(p1, p2)
 	f.copyBack()
 	return
 }
 
 // Difdegn calls swe_difdegn.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Difdegn(p1 float64, p2 float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(p1) {
 		err = invalidNumber("p1")
 		return
@@ -2500,38 +2398,36 @@ func (s *Session) Difdegn(p1 float64, p2 float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_difdegn(s.c.tls, p1, p2)
+	result = s.c.state.Difdegn(p1, p2)
 	f.copyBack()
 	return
 }
 
 // Difcs2N calls swe_difcs2n.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Difcs2N(p1 int32, p2 int32) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_difcs2n(s.c.tls, p1, p2)
+	result = s.c.state.Difcs2N(p1, p2)
 	f.copyBack()
 	return
 }
 
 // Difdeg2N calls swe_difdeg2n.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Difdeg2N(p1 float64, p2 float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(p1) {
 		err = invalidNumber("p1")
 		return
@@ -2544,20 +2440,19 @@ func (s *Session) Difdeg2N(p1 float64, p2 float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_difdeg2n(s.c.tls, p1, p2)
+	result = s.c.state.Difdeg2N(p1, p2)
 	f.copyBack()
 	return
 }
 
 // Difrad2N calls swe_difrad2n.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Difrad2N(p1 float64, p2 float64) (result float64, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(p1) {
 		err = invalidNumber("p1")
 		return
@@ -2570,38 +2465,36 @@ func (s *Session) Difrad2N(p1 float64, p2 float64) (result float64, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_difrad2n(s.c.tls, p1, p2)
+	result = s.c.state.Difrad2N(p1, p2)
 	f.copyBack()
 	return
 }
 
 // Csroundsec calls swe_csroundsec.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Csroundsec(x int32) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_csroundsec(s.c.tls, x)
+	result = s.c.state.Csroundsec(x)
 	f.copyBack()
 	return
 }
 
 // D2L calls swe_d2l.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) D2L(x float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(x) {
 		err = invalidNumber("x")
 		return
@@ -2610,20 +2503,19 @@ func (s *Session) D2L(x float64) (result int32, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_d2l(s.c.tls, x)
+	result = s.c.state.D2L(x)
 	f.copyBack()
 	return
 }
 
 // DayOfWeek calls swe_day_of_week.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) DayOfWeek(jd float64) (result int32, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	if !finite(jd) {
 		err = invalidNumber("jd")
 		return
@@ -2632,64 +2524,61 @@ func (s *Session) DayOfWeek(jd float64) (result int32, err error) {
 		err = f.err
 		return
 	}
-	result = raw.Xswe_day_of_week(s.c.tls, jd)
+	result = s.c.state.DayOfWeek(jd)
 	f.copyBack()
 	return
 }
 
 // Cs2Timestr calls swe_cs2timestr. Buffer lengths: a >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Cs2Timestr(t int32, sep int32, suppressZero int32, a []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_a := f.bytes("a", a, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_cs2timestr(s.c.tls, t, sep, suppressZero, p_a))
+	result = s.c.state.Cs2Timestr(t, sep, suppressZero, p_a)
 	f.copyBack()
 	return
 }
 
 // Cs2Lonlatstr calls swe_cs2lonlatstr. Buffer lengths: sValue >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Cs2Lonlatstr(t int32, pchar int8, mchar int8, sValue []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_sValue := f.bytes("sValue", sValue, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_cs2lonlatstr(s.c.tls, t, abiChar(pchar), abiChar(mchar), p_sValue))
+	result = s.c.state.Cs2Lonlatstr(t, pchar, mchar, p_sValue)
 	f.copyBack()
 	return
 }
 
 // Cs2Degstr calls swe_cs2degstr. Buffer lengths: a >= 256.
-// C status/diagnostic outputs retain their original meaning; err reports Go ABI validation only.
+// C status/diagnostic outputs retain their original meaning; err reports session and buffer validation only.
 func (s *Session) Cs2Degstr(t int32, a []byte) (result string, err error) {
 	if err = s.enter(); err != nil {
 		return
 	}
 	defer s.mu.Unlock()
-	f := frame{tls: s.c.tls}
-	defer f.close()
+	f := frame{}
 	p_a := f.bytes("a", a, 256)
 	if f.err != nil {
 		err = f.err
 		return
 	}
-	result = libc.GoString(raw.Xswe_cs2degstr(s.c.tls, t, p_a))
+	result = s.c.state.Cs2Degstr(t, p_a)
 	f.copyBack()
 	return
 }
