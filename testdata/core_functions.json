@@ -1,0 +1,2246 @@
+[
+  {
+    "source": "swecl.c",
+    "c_function": "calc_astronomical_refr",
+    "go_function": "calcAstronomicalRefr",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "calc_dip",
+    "go_function": "calcDip",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "calc_mer_trans",
+    "go_function": "calcMerTrans",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "calc_planet_star",
+    "go_function": "calcPlanetStar",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "eclipse_how",
+    "go_function": "eclipseHow",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "eclipse_when_loc",
+    "go_function": "eclipseWhenLoc",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "eclipse_where",
+    "go_function": "eclipseWhere",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "find_maximum",
+    "go_function": "findMaximum",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "find_zero",
+    "go_function": "findZero",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "get_dist_from_2_vectors",
+    "go_function": "getDistFrom2Vectors",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "get_gmsm",
+    "go_function": "getGmsm",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "get_sun_rad_plus_refr",
+    "go_function": "getSunRadPlusRefr",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "lun_eclipse_how",
+    "go_function": "lunEclipseHow",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "occult_when_loc",
+    "go_function": "occultWhenLoc",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "orbit_max_min_true_distance_helio",
+    "go_function": "orbitMaxMinTrueDistanceHelio",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "osc_get_ecl_pos",
+    "go_function": "oscGetEclPos",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "osc_get_orbit_constants",
+    "go_function": "oscGetOrbitConstants",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "osc_iterate_max_dist",
+    "go_function": "oscIterateMaxDist",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "osc_iterate_min_dist",
+    "go_function": "oscIterateMinDist",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "rdi_twilight",
+    "go_function": "rdiTwilight",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "rise_set_fast",
+    "go_function": "riseSetFast",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_azalt",
+    "go_function": "sweAzalt",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_azalt_rev",
+    "go_function": "sweAzaltRev",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_gauquelin_sector",
+    "go_function": "sweGauquelinSector",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_get_orbital_elements",
+    "go_function": "sweGetOrbitalElements",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_eclipse_how",
+    "go_function": "sweLunEclipseHow",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_eclipse_when",
+    "go_function": "sweLunEclipseWhen",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_eclipse_when_loc",
+    "go_function": "sweLunEclipseWhenLoc",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_occult_when_glob",
+    "go_function": "sweLunOccultWhenGlob",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_occult_when_loc",
+    "go_function": "sweLunOccultWhenLoc",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_lun_occult_where",
+    "go_function": "sweLunOccultWhere",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_nod_aps",
+    "go_function": "sweNodAps",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_nod_aps_ut",
+    "go_function": "sweNodApsUt",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_orbit_max_min_true_distance",
+    "go_function": "sweOrbitMaxMinTrueDistance",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_pheno",
+    "go_function": "swePheno",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_pheno_ut",
+    "go_function": "swePhenoUt",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_refrac",
+    "go_function": "sweRefrac",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_refrac_extended",
+    "go_function": "sweRefracExtended",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_rise_trans",
+    "go_function": "sweRiseTrans",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_rise_trans_true_hor",
+    "go_function": "sweRiseTransTrueHor",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_set_lapse_rate",
+    "go_function": "sweSetLapseRate",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_sol_eclipse_how",
+    "go_function": "sweSolEclipseHow",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_sol_eclipse_when_glob",
+    "go_function": "sweSolEclipseWhenGlob",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_sol_eclipse_when_loc",
+    "go_function": "sweSolEclipseWhenLoc",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swecl.c",
+    "c_function": "swe_sol_eclipse_where",
+    "go_function": "sweSolEclipseWhere",
+    "go_file": "internal/ephemeris/eclipses.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "init_leapsec",
+    "go_function": "initLeapsec",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_date_conversion",
+    "go_function": "sweDateConversion",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_jdet_to_utc",
+    "go_function": "sweJdetToUtc",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_jdut1_to_utc",
+    "go_function": "sweJdut1ToUtc",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_julday",
+    "go_function": "sweJulday",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_revjul",
+    "go_function": "sweRevjul",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_utc_time_zone",
+    "go_function": "sweUtcTimeZone",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swedate.c",
+    "c_function": "swe_utc_to_jd",
+    "go_function": "sweUtcToJd",
+    "go_file": "internal/ephemeris/calendar.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Airmass",
+    "go_function": "Airmass",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "AppAltfromTopoAlt",
+    "go_function": "AppAltfromTopoAlt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Bcity",
+    "go_function": "Bcity",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Bday",
+    "go_function": "Bday",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Bm",
+    "go_function": "Bm",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Bn",
+    "go_function": "Bn",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Bsky",
+    "go_function": "Bsky",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Btwi",
+    "go_function": "Btwi",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "CVA",
+    "go_function": "CVA",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Deltam",
+    "go_function": "Deltam",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "DeterObject",
+    "go_function": "DeterObject",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "DeterTAV",
+    "go_function": "DeterTAV",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "DistanceAngle",
+    "go_function": "DistanceAngle",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "HeliacalAngle",
+    "go_function": "internalHeliacalAngle",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "HourAngle",
+    "go_function": "HourAngle",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Kelvin",
+    "go_function": "Kelvin",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "LengthMoon",
+    "go_function": "LengthMoon",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Magnitude",
+    "go_function": "Magnitude",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "MoonEventJDut",
+    "go_function": "MoonEventJDut",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "MoonPhase",
+    "go_function": "MoonPhase",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "MoonsBrightness",
+    "go_function": "MoonsBrightness",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "ObjectLoc",
+    "go_function": "ObjectLoc",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "OpticFactor",
+    "go_function": "OpticFactor",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "PresEfromPresS",
+    "go_function": "PresEfromPresS",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "PupilDia",
+    "go_function": "PupilDia",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "RiseSet",
+    "go_function": "RiseSet",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Sgn",
+    "go_function": "Sgn",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "SunRA",
+    "go_function": "SunRA",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Tanh",
+    "go_function": "Tanh",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "TempEfromTempS",
+    "go_function": "TempEfromTempS",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "TopoAltfromAppAlt",
+    "go_function": "TopoAltfromAppAlt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "TopoArcVisionis",
+    "go_function": "TopoArcVisionis",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "VisLimMagn",
+    "go_function": "VisLimMagn",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "WidthMoon",
+    "go_function": "WidthMoon",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Xext",
+    "go_function": "Xext",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "Xlay",
+    "go_function": "Xlay",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "azalt_cart",
+    "go_function": "azaltCart",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "calc_rise_and_set",
+    "go_function": "calcRiseAndSet",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "call_swe_fixstar",
+    "go_function": "callSweFixstar",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "call_swe_fixstar_mag",
+    "go_function": "callSweFixstarMag",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "call_swe_rise_trans",
+    "go_function": "callSweRiseTrans",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "crossing",
+    "go_function": "crossing",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "default_heliacal_parameters",
+    "go_function": "defaultHeliacalParameters",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "find_conjunct_sun",
+    "go_function": "findConjunctSun",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "funct2",
+    "go_function": "funct2",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_acronychal_day",
+    "go_function": "getAcronychalDay",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_asc_obl",
+    "go_function": "getAscObl",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_asc_obl_diff",
+    "go_function": "getAscOblDiff",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_asc_obl_with_sun",
+    "go_function": "getAscOblWithSun",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_heliacal_day",
+    "go_function": "getHeliacalDay",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_heliacal_details",
+    "go_function": "getHeliacalDetails",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "get_synodic_period",
+    "go_function": "getSynodicPeriod",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "heliacal_ut",
+    "go_function": "heliacalUt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "heliacal_ut_arc_vis",
+    "go_function": "heliacalUtArcVis",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "heliacal_ut_vis_lim",
+    "go_function": "heliacalUtVisLim",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "kOZ",
+    "go_function": "kOZ",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "kR",
+    "go_function": "kR",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "kW",
+    "go_function": "kW",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "ka",
+    "go_function": "ka",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "kt",
+    "go_function": "kt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "moon_event_arc_vis",
+    "go_function": "moonEventArcVis",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "moon_event_vis_lim",
+    "go_function": "moonEventVisLim",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "my_rise_trans",
+    "go_function": "myRiseTrans",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "mymax",
+    "go_function": "mymax",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "mymin",
+    "go_function": "mymin",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "qYallop",
+    "go_function": "qYallop",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "strcpy_VBsafe",
+    "go_function": "strcpyVBsafe",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "swe_heliacal_angle",
+    "go_function": "sweHeliacalAngle",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "swe_heliacal_pheno_ut",
+    "go_function": "sweHeliacalPhenoUt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "swe_heliacal_ut",
+    "go_function": "sweHeliacalUt",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "swe_topo_arcus_visionis",
+    "go_function": "sweTopoArcusVisionis",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "swe_vis_limit_mag",
+    "go_function": "sweVisLimitMag",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "time_limit_invisible",
+    "go_function": "timeLimitInvisible",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "time_optimum_visibility",
+    "go_function": "timeOptimumVisibility",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "tolower_string_star",
+    "go_function": "tolowerStringStar",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehel.c",
+    "c_function": "x2min",
+    "go_function": "x2min",
+    "go_file": "internal/ephemeris/heliacal.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "Asc1",
+    "go_function": "Asc1",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "Asc2",
+    "go_function": "Asc2",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "AscDash",
+    "go_function": "AscDash",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "CalcH",
+    "go_function": "CalcH",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "apc_sector",
+    "go_function": "apcSector",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "armc_to_mc",
+    "go_function": "armcToMc",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "fix_asc_polar",
+    "go_function": "fixAscPolar",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sidereal_houses_ecl_t0",
+    "go_function": "siderealHousesEclT0",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sidereal_houses_ssypl",
+    "go_function": "siderealHousesSsypl",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sidereal_houses_trad",
+    "go_function": "siderealHousesTrad",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sunshine_init",
+    "go_function": "sunshineInit",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sunshine_solution_makransky",
+    "go_function": "sunshineSolutionMakransky",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "sunshine_solution_treindl",
+    "go_function": "sunshineSolutionTreindl",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_house_name",
+    "go_function": "sweHouseName",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_house_pos",
+    "go_function": "sweHousePos",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_houses",
+    "go_function": "sweHouses",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_houses_armc",
+    "go_function": "sweHousesArmc",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_houses_armc_ex2",
+    "go_function": "sweHousesArmcEx2",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_houses_ex",
+    "go_function": "sweHousesEx",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swe_houses_ex2",
+    "go_function": "sweHousesEx2",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swehouse.c",
+    "c_function": "swi_armc_to_mc",
+    "go_function": "swiArmcToMc",
+    "go_file": "internal/ephemeris/houses.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "fsizer",
+    "go_function": "fsizer",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "interp",
+    "go_function": "interp",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "read_const_jpl",
+    "go_function": "readConstJpl",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "reorder",
+    "go_function": "reorder",
+    "go_file": "internal/ephemeris/binary.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "state",
+    "go_function": "state",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "swi_close_jpl_file",
+    "go_function": "swiCloseJplFile",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "swi_get_jpl_denum",
+    "go_function": "swiGetJplDenum",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "swi_open_jpl_file",
+    "go_function": "swiOpenJplFile",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swejpl.c",
+    "c_function": "swi_pleph",
+    "go_function": "swiPleph",
+    "go_file": "internal/ephemeris/jpl.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "chewm",
+    "go_function": "chewm",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "corr_mean_apog",
+    "go_function": "corrMeanApog",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "corr_mean_node",
+    "go_function": "corrMeanNode",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "ecldat_equ2000",
+    "go_function": "ecldatEqu2000",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "mean_elements",
+    "go_function": "meanElements",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "mean_elements_pl",
+    "go_function": "meanElementsPl",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "mods3600",
+    "go_function": "mods3600",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "moon1",
+    "go_function": "moon1",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "moon2",
+    "go_function": "moon2",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "moon3",
+    "go_function": "moon3",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "moon4",
+    "go_function": "moon4",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "sscc",
+    "go_function": "moonSscc",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_intp_apsides",
+    "go_function": "swiIntpApsides",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_mean_apog",
+    "go_function": "swiMeanApog",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_mean_lunar_elements",
+    "go_function": "swiMeanLunarElements",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_mean_node",
+    "go_function": "swiMeanNode",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_moshmoon",
+    "go_function": "swiMoshmoon",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemmoon.c",
+    "c_function": "swi_moshmoon2",
+    "go_function": "swiMoshmoon2",
+    "go_file": "internal/ephemeris/moon.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "check_t_terms",
+    "go_function": "checkTTerms",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "embofs_mosh",
+    "go_function": "embofsMosh",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "read_elements_file",
+    "go_function": "readElementsFile",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "sscc",
+    "go_function": "planetsSscc",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "swi_get_fict_name",
+    "go_function": "swiGetFictName",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "swi_moshplan",
+    "go_function": "swiMoshplan",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "swi_moshplan2",
+    "go_function": "swiMoshplan2",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "swemplan.c",
+    "c_function": "swi_osc_el_plan",
+    "go_function": "swiOscElPlan",
+    "go_file": "internal/ephemeris/planets.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "aberr_light",
+    "go_function": "aberrLight",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_mean",
+    "go_function": "appPosEtcMean",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_moon",
+    "go_function": "appPosEtcMoon",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_plan",
+    "go_function": "appPosEtcPlan",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_plan_osc",
+    "go_function": "appPosEtcPlanOsc",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_sbar",
+    "go_function": "appPosEtcSbar",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_etc_sun",
+    "go_function": "appPosEtcSun",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "app_pos_rest",
+    "go_function": "appPosRest",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "calc_center_body",
+    "go_function": "calcCenterBody",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "calc_epsilon",
+    "go_function": "calcEpsilon",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "calc_speed",
+    "go_function": "calcSpeed",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "denormalize_positions",
+    "go_function": "denormalizePositions",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "do_fread",
+    "go_function": "doFread",
+    "go_file": "internal/ephemeris/file_decode.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "embofs",
+    "go_function": "embofs",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "fixedstar_name_compare",
+    "go_function": "fixedstarNameCompare",
+    "go_file": "internal/ephemeris/file_decode.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "fixstar_calc_from_struct",
+    "go_function": "fixstarCalcFromStruct",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "fixstar_cut_string",
+    "go_function": "fixstarCutString",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "fixstar_format_search_name",
+    "go_function": "fixstarFormatSearchName",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "free_planets",
+    "go_function": "freePlanets",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "fstar_node_compare",
+    "go_function": "fstarNodeCompare",
+    "go_file": "internal/ephemeris/file_decode.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "get_aya_correction",
+    "go_function": "getAyaCorrection",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "get_builtin_star",
+    "go_function": "getBuiltinStar",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "get_new_segment",
+    "go_function": "getNewSegment",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "intp_apsides",
+    "go_function": "intpApsides",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "jplplan",
+    "go_function": "jplplan",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "load_all_fixed_stars",
+    "go_function": "loadAllFixedStars",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "load_dpsi_deps",
+    "go_function": "loadDpsiDeps",
+    "go_file": "internal/ephemeris/eop.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "lunar_osc_elem",
+    "go_function": "lunarOscElem",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "main_planet",
+    "go_function": "mainPlanet",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "main_planet_bary",
+    "go_function": "mainPlanetBary",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "meff",
+    "go_function": "meff",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "nut_matrix",
+    "go_function": "nutMatrix",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "open_jpl_file",
+    "go_function": "openJplFile",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "plaus_iflag",
+    "go_function": "plausIflag",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "read_const",
+    "go_function": "readConst",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "rot_back",
+    "go_function": "rotBack",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "save_star_in_struct",
+    "go_function": "saveStarInStruct",
+    "go_file": "internal/ephemeris/file_decode.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "search_star_in_list",
+    "go_function": "searchStarInList",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_calc",
+    "go_function": "swecalc",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_calc_pctr",
+    "go_function": "sweCalcPctr",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_calc_ut",
+    "go_function": "sweCalcUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_close",
+    "go_function": "sweClose",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar",
+    "go_function": "sweFixstar",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar2",
+    "go_function": "sweFixstar2",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar2_mag",
+    "go_function": "sweFixstar2Mag",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar2_ut",
+    "go_function": "sweFixstar2Ut",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar_mag",
+    "go_function": "sweFixstarMag",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_fixstar_ut",
+    "go_function": "sweFixstarUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_ayanamsa",
+    "go_function": "sweGetAyanamsa",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_ayanamsa_ex",
+    "go_function": "sweGetAyanamsaEx",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_ayanamsa_ex_ut",
+    "go_function": "sweGetAyanamsaExUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_ayanamsa_name",
+    "go_function": "sweGetAyanamsaName",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_ayanamsa_ut",
+    "go_function": "sweGetAyanamsaUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_current_file_data",
+    "go_function": "sweGetCurrentFileData",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_library_path",
+    "go_function": "sweGetLibraryPath",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_get_planet_name",
+    "go_function": "sweGetPlanetName",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_helio_cross",
+    "go_function": "sweHelioCross",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_helio_cross_ut",
+    "go_function": "sweHelioCrossUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_lat_to_lmt",
+    "go_function": "sweLatToLmt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_lmt_to_lat",
+    "go_function": "sweLmtToLat",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_mooncross",
+    "go_function": "sweMooncross",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_mooncross_node",
+    "go_function": "sweMooncrossNode",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_mooncross_node_ut",
+    "go_function": "sweMooncrossNodeUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_mooncross_ut",
+    "go_function": "sweMooncrossUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_set_ephe_path",
+    "go_function": "sweSetEphePath",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_set_jpl_file",
+    "go_function": "sweSetJplFile",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_set_sid_mode",
+    "go_function": "sweSetSidMode",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_set_topo",
+    "go_function": "sweSetTopo",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_solcross",
+    "go_function": "sweSolcross",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_solcross_ut",
+    "go_function": "sweSolcrossUt",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_time_equ",
+    "go_function": "sweTimeEqu",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swe_version",
+    "go_function": "sweVersion",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swecalc",
+    "go_function": "swecalc",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swemoon",
+    "go_function": "swemoon",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "sweph",
+    "go_function": "sweph",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "sweplan",
+    "go_function": "sweplan",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_aberr_light",
+    "go_function": "swiAberrLight",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_aberr_light_ex",
+    "go_function": "swiAberrLightEx",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_check_ecliptic",
+    "go_function": "swiCheckEcliptic",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_check_nutation",
+    "go_function": "swiCheckNutation",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_close_keep_topo_etc",
+    "go_function": "swiCloseKeepTopoEtc",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_deflect_light",
+    "go_function": "swiDeflectLight",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_fixstar_calc_from_record",
+    "go_function": "swiFixstarCalcFromRecord",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_fixstar_load_record",
+    "go_function": "swiFixstarLoadRecord",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_fopen",
+    "go_function": "swiFopen",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_force_app_pos_etc",
+    "go_function": "swiForceAppPosEtc",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_get_ayanamsa_ex",
+    "go_function": "swiGetAyanamsaEx",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_get_ayanamsa_with_speed",
+    "go_function": "swiGetAyanamsaWithSpeed",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_get_denum",
+    "go_function": "swiGetDenum",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_get_observer",
+    "go_function": "swiGetObserver",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_init_swed_if_start",
+    "go_function": "swiInitSwedIfStart",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_nutate",
+    "go_function": "swiNutate",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_plan_for_osc_elem",
+    "go_function": "swiPlanForOscElem",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_precess_speed",
+    "go_function": "swiPrecessSpeed",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_trop_ra2sid_lon",
+    "go_function": "swiTropRa2sidLon",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "sweph.c",
+    "c_function": "swi_trop_ra2sid_lon_sosy",
+    "go_function": "swiTropRa2sidLonSosy",
+    "go_file": "internal/ephemeris/positions.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "adjust_for_tidacc",
+    "go_function": "adjustForTidacc",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "bessel",
+    "go_function": "bessel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "calc_deltat",
+    "go_function": "calcDeltat",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "calc_nutation",
+    "go_function": "calcNutation",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "calc_nutation_iau1980",
+    "go_function": "calcNutationIau1980",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "calc_nutation_iau2000ab",
+    "go_function": "calcNutationIau2000ab",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "calc_nutation_woolard",
+    "go_function": "calcNutationWoolard",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_aa",
+    "go_function": "deltatAa",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_espenak_meeus_1620",
+    "go_function": "deltatEspenakMeeus1620",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_longterm_morrison_stephenson",
+    "go_function": "deltatLongtermMorrisonStephenson",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_stephenson_etc_2016",
+    "go_function": "deltatStephensonEtc2016",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_stephenson_morrison_1997_1600",
+    "go_function": "deltatStephensonMorrison19971600",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "deltat_stephenson_morrison_2004_1600",
+    "go_function": "deltatStephensonMorrison20041600",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "epsiln_owen_1986",
+    "go_function": "epsilnOwen1986",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_deltat_model",
+    "go_function": "getDeltatModel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_frame_bias_model",
+    "go_function": "getFrameBiasModel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_nutation_model",
+    "go_function": "getNutationModel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_owen_t0_icof",
+    "go_function": "getOwenT0Icof",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_precession_model",
+    "go_function": "getPrecessionModel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "get_sidt_model",
+    "go_function": "getSidtModel",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "init_crc32",
+    "go_function": "initCrc32",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "init_dt",
+    "go_function": "initDt",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "owen_pre_matrix",
+    "go_function": "owenPreMatrix",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "pre_pecl",
+    "go_function": "prePecl",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "pre_pequ",
+    "go_function": "prePequ",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "pre_pmat",
+    "go_function": "prePmat",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "precess_1",
+    "go_function": "precess1",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "precess_2",
+    "go_function": "precess2",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "precess_3",
+    "go_function": "precess3",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "quadratic_intp",
+    "go_function": "quadraticIntp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "set_astro_models",
+    "go_function": "setAstroModels",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "sidtime_long_term",
+    "go_function": "sidtimeLongTerm",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "sidtime_non_polynomial_part",
+    "go_function": "sidtimeNonPolynomialPart",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "split_deg_nakshatra",
+    "go_function": "splitDegNakshatra",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_cotrans",
+    "go_function": "sweCotrans",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_cotrans_sp",
+    "go_function": "sweCotransSp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_cs2degstr",
+    "go_function": "sweCs2degstr",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_cs2lonlatstr",
+    "go_function": "sweCs2lonlatstr",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_cs2timestr",
+    "go_function": "sweCs2timestr",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_csnorm",
+    "go_function": "sweCsnorm",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_csroundsec",
+    "go_function": "sweCsroundsec",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_d2l",
+    "go_function": "sweD2l",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_day_of_week",
+    "go_function": "sweDayOfWeek",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_deg_midp",
+    "go_function": "sweDegMidp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_degnorm",
+    "go_function": "sweDegnorm",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_deltat",
+    "go_function": "sweDeltat",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_deltat_ex",
+    "go_function": "sweDeltatEx",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_difcs2n",
+    "go_function": "sweDifcs2n",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_difcsn",
+    "go_function": "sweDifcsn",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_difdeg2n",
+    "go_function": "sweDifdeg2n",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_difdegn",
+    "go_function": "sweDifdegn",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_difrad2n",
+    "go_function": "sweDifrad2n",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_get_astro_models",
+    "go_function": "sweGetAstroModels",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_get_tid_acc",
+    "go_function": "sweGetTidAcc",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_rad_midp",
+    "go_function": "sweRadMidp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_radnorm",
+    "go_function": "sweRadnorm",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_set_astro_models",
+    "go_function": "sweSetAstroModels",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_set_delta_t_userdef",
+    "go_function": "sweSetDeltaTUserdef",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_set_interpolate_nut",
+    "go_function": "sweSetInterpolateNut",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_set_tid_acc",
+    "go_function": "sweSetTidAcc",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_sidtime",
+    "go_function": "sweSidtime",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_sidtime0",
+    "go_function": "sweSidtime0",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swe_split_deg",
+    "go_function": "sweSplitDeg",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_FK4_FK5",
+    "go_function": "swiFK4FK5",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_FK5_FK4",
+    "go_function": "swiFK5FK4",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_angnorm",
+    "go_function": "swiAngnorm",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_approx_jplhor",
+    "go_function": "swiApproxJplhor",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_bias",
+    "go_function": "swiBias",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_cartpol",
+    "go_function": "swiCartpol",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_cartpol_sp",
+    "go_function": "swiCartpolSp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_coortrf",
+    "go_function": "swiCoortrf",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_coortrf2",
+    "go_function": "swiCoortrf2",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_crc32",
+    "go_function": "swiCrc32",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_cross_prod",
+    "go_function": "swiCrossProd",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_cutstr",
+    "go_function": "swiCutstr",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_dot_prod_unit",
+    "go_function": "swiDotProdUnit",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_echeb",
+    "go_function": "swiEcheb",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_edcheb",
+    "go_function": "swiEdcheb",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_epsiln",
+    "go_function": "swiEpsiln",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_gen_filename",
+    "go_function": "swiGenFilename",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_get_tid_acc",
+    "go_function": "swiGetTidAcc",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_guess_ephe_flag",
+    "go_function": "swiGuessEpheFlag",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_icrs2fk5",
+    "go_function": "swiIcrs2fk5",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_kepler",
+    "go_function": "swiKepler",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_ldp_peps",
+    "go_function": "swiLdpPeps",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_mod2PI",
+    "go_function": "swiMod2PI",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_nutation",
+    "go_function": "swiNutation",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_polcart",
+    "go_function": "swiPolcart",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_polcart_sp",
+    "go_function": "swiPolcartSp",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_precess",
+    "go_function": "swiPrecess",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_right_trim",
+    "go_function": "swiRightTrim",
+    "go_file": "internal/ephemeris/file_decode.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_set_tid_acc",
+    "go_function": "swiSetTidAcc",
+    "go_file": "internal/ephemeris/math.go"
+  },
+  {
+    "source": "swephlib.c",
+    "c_function": "swi_strcpy",
+    "go_function": "swiStrcpy",
+    "go_file": "internal/ephemeris/math.go"
+  }
+]

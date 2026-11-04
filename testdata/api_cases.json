@@ -5317,5 +5317,4979 @@
         }
       }
     ]
+  },
+  {
+    "id": "model/precession_1_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,1,1,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_1_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,1,1,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_2_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,2,2,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_2_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,2,2,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_3_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,3,3,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_3_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,3,3,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_4_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,4,4,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_4_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,4,4,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_5_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,5,5,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_5_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,5,5,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_6_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,6,6,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_6_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,6,6,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_7_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,7,7,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_7_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,7,7,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_8_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,8,8,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_8_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,8,8,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_9_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_9_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_10_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,10,10,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_10_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,10,10,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_11_1500000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,11,11,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1500000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/precession_11_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,11,11,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": 4,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_1_1000000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "1,9,9,1,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 1000000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1000000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_1_2400000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "1,9,9,1,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2400000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2400000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_1_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "1,9,9,1,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2458849.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_2_1000000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "2,9,9,2,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 1000000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1000000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_2_2400000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "2,9,9,2,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2400000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2400000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_2_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "2,9,9,2,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2458849.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_3_1000000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "3,9,9,3,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 1000000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1000000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_3_2400000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "3,9,9,3,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2400000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2400000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_3_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "3,9,9,3,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2458849.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_4_1000000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "4,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 1000000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1000000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_4_2400000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "4,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2400000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2400000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_4_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "4,9,9,4,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2458849.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_5_1000000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,5,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 1000000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 1000000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_5_2400000.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,5,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2400000.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2400000.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "model/nutation_deltaT_5_2458849.5",
+    "steps": [
+      {
+        "function": "swe_set_astro_models",
+        "args": {
+          "samod": "5,9,9,5,3,0,0,4",
+          "iflag": 258
+        }
+      },
+      {
+        "function": "swe_deltat_ex",
+        "args": {
+          "tjd": 2458849.5,
+          "iflag": 258,
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2458849.5,
+          "ipl": -1,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "sidereal/projection_257",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_set_sid_mode",
+        "args": {
+          "sid_mode": 257,
+          "t0": 2451545.0,
+          "ayan_t0": 24.0
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 65796,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 65536,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "sidereal/projection_513",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_set_sid_mode",
+        "args": {
+          "sid_mode": 513,
+          "t0": 2451545.0,
+          "ayan_t0": 24.0
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 65796,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 65536,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "sidereal/projection_511",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_set_sid_mode",
+        "args": {
+          "sid_mode": 511,
+          "t0": 2451545.0,
+          "ayan_t0": 24.0
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 65796,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 65536,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "sidereal/projection_767",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_set_sid_mode",
+        "args": {
+          "sid_mode": 767,
+          "t0": 2451545.0,
+          "ayan_t0": 24.0
+        }
+      },
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 4,
+          "iflag": 65796,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      },
+      {
+        "function": "swe_houses_ex2",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "iflag": 65536,
+          "geolat": 31.2304,
+          "geolon": 121.4737,
+          "hsys": 80,
+          "cusps": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "cusp_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "ascmc_speed": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_21",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 21,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_22",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 22,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_40",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 40,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_47",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 47,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_55",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 55,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_10016",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 10016,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "positions/additional_body_10433",
+    "velocity_tolerance": 1e-06,
+    "steps": [
+      {
+        "function": "swe_calc",
+        "args": {
+          "tjd": 2451545.0,
+          "ipl": 10433,
+          "iflag": 260,
+          "xx": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_U_-80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -80,
+          "eps": 23.4392911,
+          "hsys": 85,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_U_-31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -31.2,
+          "eps": 23.4392911,
+          "hsys": 85,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_U_0",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 0,
+          "eps": 23.4392911,
+          "hsys": 85,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_U_31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2,
+          "eps": 23.4392911,
+          "hsys": 85,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_U_80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 80,
+          "eps": 23.4392911,
+          "hsys": 85,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_I_-80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -80,
+          "eps": 23.4392911,
+          "hsys": 73,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_I_-31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -31.2,
+          "eps": 23.4392911,
+          "hsys": 73,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_I_0",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 0,
+          "eps": 23.4392911,
+          "hsys": 73,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_I_31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2,
+          "eps": 23.4392911,
+          "hsys": 73,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_I_80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 80,
+          "eps": 23.4392911,
+          "hsys": 73,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_i_-80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -80,
+          "eps": 23.4392911,
+          "hsys": 105,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_i_-31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -31.2,
+          "eps": 23.4392911,
+          "hsys": 105,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_i_0",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 0,
+          "eps": 23.4392911,
+          "hsys": 105,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_i_31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2,
+          "eps": 23.4392911,
+          "hsys": 105,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_i_80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 80,
+          "eps": 23.4392911,
+          "hsys": 105,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_G_-80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -80,
+          "eps": 23.4392911,
+          "hsys": 71,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_G_-31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": -31.2,
+          "eps": 23.4392911,
+          "hsys": 71,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_G_0",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 0,
+          "eps": 23.4392911,
+          "hsys": 71,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_G_31.2",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 31.2,
+          "eps": 23.4392911,
+          "hsys": 71,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "houses/position_G_80",
+    "steps": [
+      {
+        "function": "swe_house_pos",
+        "args": {
+          "armc": 123.45,
+          "geolat": 80,
+          "eps": 23.4392911,
+          "hsys": 71,
+          "xpin": [
+            123.45,
+            2.1
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rise/mode_4",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 4,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rise/mode_8",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 8,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rise/mode_1025",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 1025,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rise/mode_2050",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 2050,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "rise/mode_4097",
+    "steps": [
+      {
+        "function": "swe_rise_trans",
+        "args": {
+          "tjd_ut": 2451545.0,
+          "ipl": 4,
+          "starname": "",
+          "epheflag": 2,
+          "rsmi": 4097,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "atpress": 1013.25,
+          "attemp": 15,
+          "tret": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_65538_Venus",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "iflag": 67586,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_65538_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 3,
+          "iflag": 67586,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_65538_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 1,
+          "iflag": 67586,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_131074_Venus",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "iflag": 133122,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_131074_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 3,
+          "iflag": 133122,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_131074_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 1,
+          "iflag": 133122,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_262146_Venus",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "iflag": 264194,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_262146_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 3,
+          "iflag": 264194,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_262146_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 1,
+          "iflag": 264194,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_524290_Venus",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Venus",
+          "TypeEvent": 1,
+          "iflag": 526338,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_524290_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 3,
+          "iflag": 526338,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/arc_524290_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 1,
+          "iflag": 526338,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_1_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 1,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_1_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 1,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_2_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 2,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_2_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 2,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_3_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 3,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_3_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 3,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_4_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 4,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_4_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 4,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_5_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 5,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_5_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 5,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_6_Moon",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Moon",
+          "TypeEvent": 6,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "heliacal/visibility_6_Sirius",
+    "steps": [
+      {
+        "function": "swe_heliacal_ut",
+        "args": {
+          "tjdstart_ut": 2460310.5,
+          "geopos": [
+            8.55,
+            47.37,
+            408
+          ],
+          "datm": [
+            1013.25,
+            15,
+            40,
+            0.25
+          ],
+          "dobs": [
+            36,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "ObjectName": "Sirius",
+          "TypeEvent": 6,
+          "iflag": 2050,
+          "dret": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "orbit/distance_flags_2",
+    "steps": [
+      {
+        "function": "swe_orbit_max_min_true_distance",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 2,
+          "dmax": [
+            0
+          ],
+          "dmin": [
+            0
+          ],
+          "dtrue": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "orbit/distance_flags_10",
+    "steps": [
+      {
+        "function": "swe_orbit_max_min_true_distance",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 10,
+          "dmax": [
+            0
+          ],
+          "dmin": [
+            0
+          ],
+          "dtrue": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "orbit/distance_flags_16386",
+    "steps": [
+      {
+        "function": "swe_orbit_max_min_true_distance",
+        "args": {
+          "tjd_et": 2451545.0,
+          "ipl": 4,
+          "iflag": 16386,
+          "dmax": [
+            0
+          ],
+          "dmin": [
+            0
+          ],
+          "dtrue": [
+            0
+          ],
+          "serr": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "degrees/nakshatra",
+    "steps": [
+      {
+        "function": "swe_split_deg",
+        "args": {
+          "ddeg": 123.456789,
+          "roundflag": 1024,
+          "ideg": [
+            0
+          ],
+          "imin": [
+            0
+          ],
+          "isec": [
+            0
+          ],
+          "dsecfr": [
+            0
+          ],
+          "isgn": [
+            0
+          ]
+        }
+      }
+    ]
   }
 ]

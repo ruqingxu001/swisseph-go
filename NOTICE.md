@@ -1,33 +1,29 @@
 # Source and license
 
-This is a local Go translation of Swiss Ephemeris, not an independent algorithm implementation.
+This is a derivative Go implementation of Swiss Ephemeris, preserving its astronomical algorithms.
 
 - Upstream: https://github.com/aloistr/swisseph
 - Tag: `v2.10.03`
 - Commit: `175e1fcb3108bcd5c0d146c803f51dcf23508012`
-- Original copyright: Astrodienst AG; authors Dieter Koch and Alois Treindl. This attribution is not an endorsement.
-- This local derivative selects **AGPL-3.0**, with the full license in `LICENSE`. The original dual-license notice is preserved in `upstream/LICENSE`, all original source headers, and the generated Go files. Translation does not grant a free closed-source commercial license.
-- Unmodified input files and SHA-256 hashes are in `upstream/`. The original Makefile is retained for provenance; its optional examples are not included. The exact Flutter ephemeris dataset and the DE200 test binary are bundled; see EPHEMERIS.md for provenance and checksum manifests.
-- Our added wrapper, harness, and build scripts are licensed under AGPL-3.0-only.
+- Copyright (C) 1997 - 2021 Astrodienst AG, Switzerland. All rights reserved. Authors: Dieter Koch and Alois Treindl. This attribution is not an endorsement.
+- This derivative selects **AGPL-3.0-only**, with the full license in `LICENSE`. The original dual-license notice remains in `upstream/LICENSE`, the unmodified sources, and the derived core files. Translation does not grant a free closed-source commercial license.
+- Unmodified inputs and SHA-256 hashes remain in `upstream/`. The original Makefile is retained for provenance; optional examples are not included. The Flutter dataset and DE200 binary retain their provenance and checksums; see `EPHEMERIS.md`.
+- Added wrappers, tests and tools are licensed under AGPL-3.0-only.
 
-## Translation changes
+## Go refactoring, 2026-11-03
 
-`tools/generate.py` uses `modernc.org/ccgo/v4 v4.26.0`; generated code uses `modernc.org/libc v1.62.1`. Their own BSD-style license notices remain in their Go modules (use `go mod vendor` if distributing vendored dependencies).
+The former four platform-specific ccgo outputs and their modernc runtime dependencies have been replaced by one manually maintained core in `internal/ephemeris`. The nine original computational domains and 374-function inventory are retained, using native records, arrays, slices, structured control flow and standard-library file I/O. There is no runtime C compiler, subprocess, ABI emulation or external Go dependency. Public API bridges are generated from the pinned header; the numerical core is maintained directly.
 
-The nine library units in upstream `SWEOBJ` are translated without replacing their astronomical algorithms. The build defines `TLSOFF`: C thread-local storage becomes shared state, protected by the public Go wrapper's process-wide mutex for the entire operation. `NO_SWE_GLP` uses the upstream empty-library-path implementation because there is no dynamic Swiss library.
+Each Engine operation owns its calculation state. A Session retains that state and its caches for the callback, with method-level synchronization. Read-only coefficient tables are shared, while leap-second and delta-T defaults are copied by value. Binary Swiss/JPL records are decoded explicitly, with buffered seek/tell and byte-order conversion independent of host layout.
 
-The temporary translation copy changes the two `swejpl.c` macros `FSEEK fseeko` / `FTELL ftello` to `fseek` / `ftell`. All four supported targets have 64-bit `long` and file offsets. This resolves missing Darwin libc adapter symbols without modifying numerical logic. Upstream files themselves remain unchanged. JPL binary-file seek/read behavior is covered by 400 DE200 differential cases; other JPL versions and damaged inputs are not exhaustively covered.
+Numerical ordering, signed/unsigned conversions and C binary64 constant rounding are preserved. Numeric-prefix parsing follows C-locale atof behavior (1,020 native C comparisons); unspecified NaN signs/payloads are compared by classification. The heliacal arc-visibility implementation uses a three-element azimuth output buffer because swe_azalt writes three values; the original C caller declares only two. Truncated binary records and invalid EOP daily records produce errors. Valid file calculations remain covered by native C comparisons. The test C sources themselves are unchanged.
 
-Generated layouts are platform-specific. The initial Darwin generation used Xcode SDK headers on the local Mac; regenerating with a different SDK/toolchain can change platform declarations. Build scripts and source hashes are reproducible inputs, not a claim of byte-identical output across SDK versions.
+The C reference builds use `TLSOFF` and `NO_SWE_GLP` only in test executables. The Go library-path API returns the upstream empty-path result because there is no dynamically loaded Swiss library. Public C char codes are represented by their byte values. Fixed references, tolerances and remaining coverage limits are documented in `API_COVERAGE.md` and `CORE_VALIDATION.md`.
 
-A deterministic post-processing step replaces generated `libc.Xatof` calls with the local `cAtof` adapter. libc v1.62.1 aborts on nonnumeric fixed-star fields such as `ICRS`; C atof returns zero. The adapter implements C-locale numeric-prefix parsing and is checked against native C in 1,020 cases. It changes no astronomical formulas.
-
-The public API marshaling layer is generated from the unmodified `swephexp.h`; it copies slices to libc-managed allocations and preserves native statuses. Engine/Session state handling, validation, fixtures and documentation are local additions dated 2026-11-02.
-
-Public scalar C `char` arguments use a target-specific alias: signed on Darwin and Linux amd64, unsigned on Linux arm64. The Go-facing int8 parameter preserves the same eight bits.
+The Linux Dart wrapper reference was recaptured with Dart 3.5.1 and unchanged sweph 3.2.1+2.10.3 sources. A standalone package configuration supplies its dependencies without changing the wrapper or algorithms. The existing App fixture was retained and its source hashes rechecked; the Flutter application was not rerun for this revision.
 
 ## Bundled ephemeris data
 
-`ephe/` preserves the existing Flutter Swiss Ephemeris dataset byte-for-byte, including its original catalog headers and notes. Swiss Ephemeris attribution and license notices remain in `upstream/LICENSE` and `LICENSE`.
+`ephe/` preserves the existing Flutter dataset byte-for-byte, including catalog headers and notes. Swiss Ephemeris attribution and notices remain in `upstream/LICENSE` and `LICENSE`.
 
-`testdata/jpl/de200.eph` is an unchanged NASA/JPL DE200 binary from the official Solar System Dynamics download service. Its provenance, byte count and SHA-256 are recorded in `testdata/jpl-source.json`. It is third-party scientific data; the wrapper's AGPL declaration does not replace the data provider's applicable terms. No NASA/JPL endorsement is implied.
+`testdata/jpl/de200.eph` is an unchanged NASA/JPL DE200 binary from the official Solar System Dynamics service. Provenance, byte count and SHA-256 are in `testdata/jpl-source.json`. It is third-party scientific data; the wrapper's AGPL declaration does not replace the provider's applicable terms. No NASA/JPL endorsement is implied.

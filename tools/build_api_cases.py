@@ -33,6 +33,8 @@ def step(name,overrides=None):
   else:
    if n not in scalar:raise ValueError((name,n))
    args[n]=int(scalar[n]) if typ in ['int32','int8'] else scalar[n]
+ if overrides and not overrides.keys() <= args.keys():
+  raise ValueError((name, 'unknown parameters', overrides.keys() - args.keys()))
  args.update(overrides or {})
  return {'function':name,'args':args}
 
@@ -89,5 +91,38 @@ for jd in [2415020.5,2451545.0,2460310.5]:
   cases.append({'id':name+'/time_'+str(jd),'steps':[call]})
 # Real Venus occultation found by the native global search, then geometry there.
 cases.append({'id':'swe_lun_occult_where/at_event','steps':[step('swe_lun_occult_where',{'tjd':2460408.1792892623,'ipl':3})]})
+# Exercise every supported precession, nutation and delta-T model rather than
+# relying only on the defaults used by the application.
+for model in range(1,12):
+ for jd in [1500000.5,2458849.5]:
+  cases.append({'id':f'model/precession_{model}_{jd}','steps':[
+   step('swe_set_astro_models',{'samod':f'5,{model},{model},4,3,0,0,4'}),
+   step('swe_calc',{'tjd':jd,'iflag':4|256,'ipl':4}),
+   step('swe_calc',{'tjd':jd,'iflag':4|256,'ipl':-1})]})
+for model in range(1,6):
+ for jd in [1000000.5,2400000.5,2458849.5]:
+  cases.append({'id':f'model/nutation_deltaT_{model}_{jd}','steps':[
+   step('swe_set_astro_models',{'samod':f'{model},9,9,{model},3,0,0,4'}),
+   step('swe_deltat_ex',{'tjd':jd}),step('swe_calc',{'tjd':jd,'ipl':-1,'iflag':4|256})]})
+for sidereal_mode in [1|256,1|512,255|256,255|512]:
+ cases.append({'id':f'sidereal/projection_{sidereal_mode}','velocity_tolerance':1e-6,'steps':[
+  step('swe_set_sid_mode',{'sid_mode':sidereal_mode}),
+  step('swe_calc',{'iflag':4|256|65536}),step('swe_houses_ex2',{'iflag':65536})]})
+for body in [21,22,40,47,55,10016,10433]:
+ cases.append({'id':f'positions/additional_body_{body}','velocity_tolerance':1e-6,'steps':[step('swe_calc',{'ipl':body,'iflag':4|256})]})
+for system in ['U','I','i','G']:
+ for latitude in [-80,-31.2,0,31.2,80]:
+  cases.append({'id':f'houses/position_{system}_{latitude}','steps':[step('swe_house_pos',{'hsys':ord(system),'geolat':latitude})]})
+for mode in [4,8,1|1024,2|2048,1|4096]:
+ cases.append({'id':f'rise/mode_{mode}','steps':[step('swe_rise_trans',{'rsmi':mode})]})
+for flags in [2|65536,2|131072,2|262144,2|524288]:
+ for obj in ['Venus','Moon','Sirius']:
+  cases.append({'id':f'heliacal/arc_{flags}_{obj}','steps':[step('swe_heliacal_ut',{'iflag':flags|2048,'ObjectName':obj,'TypeEvent':3 if obj=='Moon' else 1})]})
+for event in [1,2,3,4,5,6]:
+ for obj in ['Moon','Sirius']:
+  cases.append({'id':f'heliacal/visibility_{event}_{obj}','steps':[step('swe_heliacal_ut',{'iflag':2|2048,'ObjectName':obj,'TypeEvent':event})]})
+for flags in [2,2|8,2|16384]:
+ cases.append({'id':f'orbit/distance_flags_{flags}','steps':[step('swe_orbit_max_min_true_distance',{'iflag':flags})]})
+cases.append({'id':'degrees/nakshatra','steps':[step('swe_split_deg',{'roundflag':1024})]})
 (ROOT/'testdata/api_cases.json').write_text(json.dumps(cases,indent=2)+'\n')
 print('Wrote',len(cases),'cases')

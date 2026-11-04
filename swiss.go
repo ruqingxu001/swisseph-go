@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 
-// Package swisseph provides a Go interface to a direct Go translation of Swiss
+// Package swisseph provides a Go interface to a native Go implementation of Swiss
 // Ephemeris 2.10.03. Runtime calculations do not use CGO or a C subprocess.
 package swisseph
 
@@ -11,11 +11,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"sync"
-	"unsafe"
 
-	"github.com/ruqingxu001/swisseph-go/internal/raw"
-	"modernc.org/libc"
+	"github.com/ruqingxu001/swisseph-go/internal/ephemeris"
 )
 
 const (
@@ -80,10 +77,6 @@ type Config struct {
 
 type Engine struct{ config Config }
 
-// All upstream global state (including static caches) is protected for the
-// complete configure/calculate/close operation, not just individual setters.
-var engineMu sync.Mutex
-
 func New(config Config) (*Engine, error) {
 	if !finite(config.SiderealEpoch, config.Ayanamsa, config.Longitude, config.Latitude, config.Altitude) || math.Abs(config.Latitude) > 90 || math.Abs(config.Longitude) > 180 {
 		return nil, errors.New("invalid configuration coordinates or non-finite value")
@@ -92,7 +85,7 @@ func New(config Config) (*Engine, error) {
 	if err != nil {
 		return nil, err
 	}
-	if strings.ContainsAny(path, "\x00:;") || len(path) > 230 {
+	if strings.ContainsAny(strings.TrimPrefix(path, filepath.VolumeName(path)), "\x00:;") || len(path) > 230 {
 		return nil, errors.New("ephemeris directory must be one path of at most 230 bytes")
 	}
 	info, err := os.Stat(path)
@@ -107,45 +100,30 @@ func New(config Config) (*Engine, error) {
 }
 
 type call struct {
-	tls    *libc.TLS
-	memory uintptr
+	state      *ephemeris.State
+	diagnostic [256]byte
 }
 
-// The translated ABI accepts libc-allocated memory only. Never pass pointers to
-// Go arrays/slices as uintptr: stack movement and GC would invalidate them.
+// Each call owns its calculation state and caches. A Session reuses that state
+// for its complete callback, without process-wide mutable engine state.
 func (e *Engine) run(fn func(*call) error) error {
 	if e == nil {
 		return errors.New("nil ephemeris engine")
 	}
-	engineMu.Lock()
-	defer engineMu.Unlock()
 	if os.Getenv("SE_EPHE_PATH") != "" {
 		return errors.New("unset SE_EPHE_PATH: it overrides the configured ephemeris directory")
 	}
-	tls := libc.NewTLS()
-	defer tls.Close()
-	ptr := libc.Xcalloc(tls, 1, 2048)
-	if ptr == 0 {
-		return errors.New("ephemeris allocation failed")
-	}
-	defer libc.Xfree(tls, ptr)
-	c := &call{tls: tls, memory: ptr}
-	// Reserve the first 256 bytes for the path and the next 256 for messages.
-	copy(unsafe.Slice((*byte)(unsafe.Pointer(ptr)), 256), e.config.EphemerisPath)
-	raw.Xswe_close(tls)
-	raw.Xswe_set_delta_t_userdef(tls, -1e-10)
-	raw.Xswe_set_interpolate_nut(tls, 0)
-	raw.Xswe_set_lapse_rate(tls, 0.0065)
-	raw.Xswe_set_ephe_path(tls, ptr)
-	copy(unsafe.Slice((*byte)(unsafe.Pointer(ptr+1536)), 256), "de431.eph")
-	raw.Xswe_set_jpl_file(tls, ptr+1536)
-	// The JPL setter clears lunar-file metadata. Restore it before UT delta-T
-	// selection, exactly as a fresh swe_set_ephe_path in the Flutter wrapper.
-	raw.Xswe_set_ephe_path(tls, ptr)
-	defer raw.Xswe_close(tls)
-	raw.Xswe_set_sid_mode(tls, e.config.SiderealMode, e.config.SiderealEpoch, e.config.Ayanamsa)
-	raw.Xswe_set_topo(tls, e.config.Longitude, e.config.Latitude, e.config.Altitude)
-	return fn(c)
+	state := ephemeris.NewState()
+	state.SetDeltaTUserdef(-1e-10)
+	state.SetInterpolateNut(0)
+	state.SetLapseRate(0.0065)
+	state.SetEphePath(e.config.EphemerisPath)
+	state.SetJplFile("de431.eph")
+	state.SetEphePath(e.config.EphemerisPath)
+	defer state.Close()
+	state.SetSidMode(e.config.SiderealMode, e.config.SiderealEpoch, e.config.Ayanamsa)
+	state.SetTopo(e.config.Longitude, e.config.Latitude, e.config.Altitude)
+	return fn(&call{state: state})
 }
 
 func finite(values ...float64) bool {
@@ -156,9 +134,12 @@ func finite(values ...float64) bool {
 	}
 	return true
 }
-func (c *call) message() string { return libc.GoString(c.memory + 256) }
-func (c *call) doubles(offset uintptr, n int) []float64 {
-	return unsafe.Slice((*float64)(unsafe.Pointer(c.memory+offset)), n)
+func (c *call) message() string {
+	end := 0
+	for end < len(c.diagnostic) && c.diagnostic[end] != 0 {
+		end++
+	}
+	return string(c.diagnostic[:end])
 }
 func (c *call) status(code int32) error {
 	if code < 0 {
@@ -187,11 +168,10 @@ func (e *Engine) calc(jd float64, body, flags int32, et bool) (result CalcResult
 	}
 	err = e.run(func(c *call) error {
 		if et {
-			result.Flags = raw.Xswe_calc(c.tls, jd, body, flags, c.memory+512, c.memory+256)
+			result.Flags = c.state.Calc(jd, body, flags, result.Position[:], c.diagnostic[:])
 		} else {
-			result.Flags = raw.Xswe_calc_ut(c.tls, jd, body, flags, c.memory+512, c.memory+256)
+			result.Flags = c.state.CalcUt(jd, body, flags, result.Position[:], c.diagnostic[:])
 		}
-		copy(result.Position[:], c.doubles(512, 6))
 		result.Warning = c.message()
 		if err := c.status(result.Flags); err != nil {
 			return err
@@ -232,11 +212,7 @@ func (e *Engine) Houses(jd float64, flags int32, latitude, longitude float64, sy
 		result.Count = 36
 	}
 	err = e.run(func(c *call) error {
-		result.Status = raw.Xswe_houses_ex2(c.tls, jd, flags, latitude, longitude, int32(system), c.memory+512, c.memory+808, c.memory+888, c.memory+1184, c.memory+256)
-		copy(result.Cusps[:], c.doubles(512, 37))
-		copy(result.Angles[:], c.doubles(808, 10))
-		copy(result.CuspSpeeds[:], c.doubles(888, 37))
-		copy(result.AngleSpeeds[:], c.doubles(1184, 10))
+		result.Status = c.state.HousesEx2(jd, flags, latitude, longitude, int32(system), result.Cusps[:], result.Angles[:], result.CuspSpeeds[:], result.AngleSpeeds[:], c.diagnostic[:])
 		result.Warning = c.message()
 		return c.status(result.Status) // Preserve partial/fallback output, but never hide polar errors.
 	})
@@ -254,10 +230,10 @@ func (e *Engine) JulianDay(year, month, day int32, hour float64, calendar int32)
 		return 0, errors.New("invalid calendar date")
 	}
 	err = e.run(func(c *call) error {
-		jd = raw.Xswe_julday(c.tls, year, month, day, hour, calendar)
+		jd = c.state.Julday(year, month, day, hour, calendar)
 		// Validate at noon: the final microsecond of a valid day can round to
 		// the next midnight in a float64 Julian day.
-		date := c.reverse(raw.Xswe_julday(c.tls, year, month, day, 12, calendar), calendar)
+		date := c.reverse(c.state.Julday(year, month, day, 12, calendar), calendar)
 		if date.Year != year || date.Month != month || date.Day != day {
 			return errors.New("invalid day in calendar month")
 		}
@@ -266,8 +242,10 @@ func (e *Engine) JulianDay(year, month, day int32, hour float64, calendar int32)
 	return
 }
 func (c *call) reverse(jd float64, calendar int32) CalendarDate {
-	raw.Xswe_revjul(c.tls, jd, calendar, c.memory+512, c.memory+516, c.memory+520, c.memory+528)
-	return CalendarDate{*(*int32)(unsafe.Pointer(c.memory + 512)), *(*int32)(unsafe.Pointer(c.memory + 516)), *(*int32)(unsafe.Pointer(c.memory + 520)), c.doubles(528, 1)[0]}
+	var year, month, day [1]int32
+	var hour [1]float64
+	c.state.Revjul(jd, calendar, year[:], month[:], day[:], hour[:])
+	return CalendarDate{year[0], month[0], day[0], hour[0]}
 }
 func (e *Engine) ReverseJulianDay(jd float64, calendar int32) (date CalendarDate, err error) {
 	if !validCalendar(calendar) || !finite(jd) {
@@ -288,8 +266,9 @@ func (e *Engine) UTCToJD(date UTCDate, calendar int32) (times JulianTimes, err e
 		return times, errors.New("invalid calendar or second")
 	}
 	err = e.run(func(c *call) error {
-		status := raw.Xswe_utc_to_jd(c.tls, date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, calendar, c.memory+512, c.memory+256)
-		times = JulianTimes{c.doubles(512, 2)[0], c.doubles(512, 2)[1]}
+		var values [2]float64
+		status := c.state.UtcToJd(date.Year, date.Month, date.Day, date.Hour, date.Minute, date.Second, calendar, values[:], c.diagnostic[:])
+		times = JulianTimes{values[0], values[1]}
 		return c.status(status)
 	})
 	return
@@ -331,11 +310,10 @@ func (e *Engine) NextEclipse(jd float64, flags, eclipseType int32, solar, backwa
 			back = 1
 		}
 		if solar {
-			result.Type = raw.Xswe_sol_eclipse_when_glob(c.tls, jd, flags, eclipseType, c.memory+512, back, c.memory+256)
+			result.Type = c.state.SolEclipseWhenGlob(jd, flags, eclipseType, result.Times[:], back, c.diagnostic[:])
 		} else {
-			result.Type = raw.Xswe_lun_eclipse_when(c.tls, jd, flags, eclipseType, c.memory+512, back, c.memory+256)
+			result.Type = c.state.LunEclipseWhen(jd, flags, eclipseType, result.Times[:], back, c.diagnostic[:])
 		}
-		copy(result.Times[:], c.doubles(512, 10))
 		result.Warning = c.message()
 		return c.status(result.Type)
 	})
@@ -351,8 +329,8 @@ func (e *Engine) NextEclipse(jd float64, flags, eclipseType int32, solar, backwa
 
 func (e *Engine) Version() (version string, err error) {
 	err = e.run(func(c *call) error {
-		raw.Xswe_version(c.tls, c.memory+512)
-		version = libc.GoString(c.memory + 512)
+		var buffer [256]byte
+		version = c.state.Version(buffer[:])
 		return nil
 	})
 	return

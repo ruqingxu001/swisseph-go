@@ -19,7 +19,7 @@ for n in names:
 output=Path(a.output).resolve();output.parent.mkdir(parents=True,exist_ok=True)
 with tempfile.TemporaryDirectory(prefix='swiss-dart-') as tmp:
  library=Path(tmp)/('libsweph.dylib' if os.uname().sysname=='Darwin' else 'libsweph.so')
- cmd=[os.environ.get('CC','cc'),'-O2','-fPIC','-shared','-DTLSOFF','-DNO_SWE_GLP','-I'+str(src),*[str(src/(n+'.c')) for n in names],'-lm','-o',str(library)]
+ cmd=[os.environ.get('CC','cc'),'-O2','-ffp-contract=off','-fPIC','-shared','-DTLSOFF','-DNO_SWE_GLP','-I'+str(src),*[str(src/(n+'.c')) for n in names],'-lm','-o',str(library)]
  subprocess.run(cmd,check=True)
  with output.open('w') as f:
   subprocess.run([a.dart,'--packages='+str(config),str(ROOT/'validation/flutter_oracle.dart'),str(library.parent/"sweph"),str(Path(a.ephe).resolve())],stdout=f,check=True)

@@ -35,6 +35,9 @@ type apiStep struct {
 type apiCase struct {
 	ID    string
 	Steps []apiStep
+	// Additional velocity samples use the Engine suite's established bound.
+	// The original 256 cases retain their stricter field-specific tolerances.
+	VelocityTolerance float64 `json:"velocity_tolerance,omitempty"`
 }
 type apiReference struct {
 	ID, Function string
@@ -73,7 +76,7 @@ func TestAllPublicAPIsAgainstC(t *testing.T) {
 	if out, err := exec.Command("python3", "tools/api_oracle.py", source).CombinedOutput(); err != nil {
 		t.Fatalf("generate oracle %v %s", err, out)
 	}
-	args := []string{"-O2", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
+	args := []string{"-O2", "-ffp-contract=off", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
 	for _, n := range []string{"swedate", "swehouse", "swejpl", "swemmoon", "swemplan", "sweph", "swephlib", "swecl", "swehel"} {
 		args = append(args, "upstream/"+n+".c")
 	}
@@ -179,7 +182,7 @@ func TestAllPublicAPIsAgainstC(t *testing.T) {
 							}
 							v = string(b[:end])
 						}
-						compareAPI(t, a.CName, name, v, ref.Outputs[name], maxDelta)
+						compareAPIWithVelocity(t, a.CName, name, v, ref.Outputs[name], maxDelta, tc.VelocityTolerance)
 					}
 					seen[a.CName]++
 				}
@@ -200,6 +203,11 @@ func TestAllPublicAPIsAgainstC(t *testing.T) {
 
 func compareAPI(t *testing.T, function, field string, got, want any, maxDelta map[string]float64) {
 	t.Helper()
+	compareAPIWithVelocity(t, function, field, got, want, maxDelta, 0)
+}
+
+func compareAPIWithVelocity(t *testing.T, function, field string, got, want any, maxDelta map[string]float64, velocityTolerance float64) {
+	t.Helper()
 	if got == nil || want == nil {
 		if got != want {
 			t.Errorf("%s %s: %v != %v", function, field, got, want)
@@ -219,7 +227,7 @@ func compareAPI(t *testing.T, function, field string, got, want any, maxDelta ma
 			t.Fatalf("output length mismatch")
 		}
 		for i := 0; i < gv.Len(); i++ {
-			compareAPI(t, function, fmt.Sprintf("%s[%d]", field, i), gv.Index(i).Interface(), ws[i], maxDelta)
+			compareAPIWithVelocity(t, function, fmt.Sprintf("%s[%d]", field, i), gv.Index(i).Interface(), ws[i], maxDelta, velocityTolerance)
 		}
 		return
 	}
@@ -237,6 +245,9 @@ func compareAPI(t *testing.T, function, field string, got, want any, maxDelta ma
 	// Strict absolute tolerance for coordinates; adaptive relative term for
 	// large heliacal quantities. Integral statuses and strings remain exact.
 	tolerance := 1e-8
+	if velocityTolerance > 0 && function == "swe_calc" && (field == "xx[3]" || field == "xx[4]" || field == "xx[5]") {
+		tolerance = velocityTolerance
+	}
 	// Radial stellar speed differentiates very large distances; native libm
 	// and Go rounding are amplified. The bound is AU/day, not angular degrees.
 	if (function == "swe_fixstar_ut" || function == "swe_fixstar2_ut") && field == "xx[5]" {
