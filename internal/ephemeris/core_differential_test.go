@@ -69,7 +69,7 @@ int main(int argc,char **argv){if(argc!=3)return 2;swe_set_ephe_path(argv[1]);` 
 			if err := os.WriteFile(source, []byte(program), 0600); err != nil {
 				t.Fatal(err)
 			}
-			args := []string{"-O2", "-DTLSOFF", "-DNO_SWE_GLP", "-I../../upstream", source}
+			args := []string{"-O2", "-ffp-contract=off", "-DTLSOFF", "-DNO_SWE_GLP", "-I../../upstream", source}
 			for _, unit := range []string{"swedate", "swehouse", "swejpl", "swemmoon", "swemplan", "sweph", "swephlib", "swecl", "swehel"} {
 				if unit != module.source {
 					args = append(args, "../../upstream/"+unit+".c")

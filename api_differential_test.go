@@ -76,7 +76,7 @@ func TestAllPublicAPIsAgainstC(t *testing.T) {
 	if out, err := exec.Command("python3", "tools/api_oracle.py", source).CombinedOutput(); err != nil {
 		t.Fatalf("generate oracle %v %s", err, out)
 	}
-	args := []string{"-O2", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
+	args := []string{"-O2", "-ffp-contract=off", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
 	for _, n := range []string{"swedate", "swehouse", "swejpl", "swemmoon", "swemplan", "sweph", "swephlib", "swecl", "swehel"} {
 		args = append(args, "upstream/"+n+".c")
 	}

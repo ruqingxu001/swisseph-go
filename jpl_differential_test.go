@@ -44,7 +44,7 @@ int main(int argc,char **argv){
 	if err = os.WriteFile(source, []byte(c), 0600); err != nil {
 		t.Fatal(err)
 	}
-	args := []string{"-O2", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
+	args := []string{"-O2", "-ffp-contract=off", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", source}
 	for _, n := range []string{"swedate", "swehouse", "swejpl", "swemmoon", "swemplan", "sweph", "swephlib", "swecl", "swehel"} {
 		args = append(args, "upstream/"+n+".c")
 	}

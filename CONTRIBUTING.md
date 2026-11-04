@@ -10,3 +10,4 @@
 - 运行 README 中的基础测试、完整 C/Flutter/JPL 差分、race、默认 vet 及跨平台构建。完整验证后用 `tools/write_coverage.py --log ... --functions ...` 更新两份矩阵。
 - 测试使用合成日期、位置和星体，不提交个人出生资料、业务配置、凭据或本机路径。数据变化须核对来源并更新哈希及真实参考。
 - Windows 运行 Python 使用 `py -3`；完整 C oracle 当前以 Linux/macOS 为执行环境。其他平台的交叉构建不代替实际数值验证。
+- C oracle 和 Dart 参考库使用 `-ffp-contract=off`，明确每次乘法/加法的 binary64 舍入。较新编译器默认启用 FMA 时会改变参考数值，并被月球拱点和速度差分放大；不通过放宽测试容差来适配该编译差异。

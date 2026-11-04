@@ -33,6 +33,7 @@ jobs:
       - run: python3 tools/generate_api.py && python3 tools/build_api_cases.py
       - run: git diff --exit-code -- api.json api_generated.go internal/ephemeris/api.go testdata/api_cases.json
       - run: go test -v -tags differential,fluttercompare -coverpkg=./internal/ephemeris -coverprofile=core.cover ./... -timeout 10m | tee full-test.log
+        shell: bash
         env:
           CGO_ENABLED: '0'
           SWISSGO_TEST_EPHE_PATH: ${{ github.workspace }}/ephe

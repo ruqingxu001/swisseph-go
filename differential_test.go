@@ -35,7 +35,9 @@ func TestNativeDifferential(t *testing.T) {
 		}
 	}
 	binary := filepath.Join(t.TempDir(), "oracle")
-	args := []string{"-O2", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", "testdata/oracle.c"}
+	// Match the separate binary64 rounding used by the Go formulas. FMA
+	// contraction changes the C reference on compilers targeting newer CPUs.
+	args := []string{"-O2", "-ffp-contract=off", "-DTLSOFF", "-DNO_SWE_GLP", "-Iupstream", "testdata/oracle.c"}
 	for _, n := range []string{"swedate", "swehouse", "swejpl", "swemmoon", "swemplan", "sweph", "swephlib", "swecl", "swehel"} {
 		args = append(args, "upstream/"+n+".c")
 	}
